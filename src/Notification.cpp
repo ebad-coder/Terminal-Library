@@ -52,8 +52,15 @@ bool Notification::is_read() { return read_status; }
 void Notification::mark_as_read() { read_status = true; }
 
 
-const std::string Notification::convert_to_string() const
+const std::string Notification::convert_to_string()
 {
+    size_t pos = 0;
+    while ((pos = body.find("\n", pos)) != std::string::npos)
+    {
+        body.replace(pos, 1, "[NL]");
+        pos += 4;
+    }
+
     return sender + "|" + receiver + "|" + title + "|" + body + "|" + date + "|" + std::to_string(read_status) + "|" + resource_id + "\n";
 }
 
@@ -73,7 +80,7 @@ void Notification::set_receiver(const std::string &r)
 }
 
 
-std::ostream &operator<<(std::ostream &os, const Notification &notification)
+std::ostream &operator<<(std::ostream &os, Notification &notification)
 {
     os << notification.convert_to_string();
     return os;

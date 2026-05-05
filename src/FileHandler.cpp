@@ -317,6 +317,14 @@ void FileHandler::load_notifications(std::unordered_map<std::string, std::unique
         std::getline(ss, receiver, '|');
         std::getline(ss, title, '|');
         std::getline(ss, body, '|');
+
+        size_t pos = 0;
+        while ((pos = body.find("[NL]", pos)) != std::string::npos)
+        {
+            body.replace(pos, 4, "\n");
+            pos += 1;
+        }
+        
         std::getline(ss, date, '|');
         std::getline(ss, read_status_str, '|');
         std::getline(ss, resource_id, '|');

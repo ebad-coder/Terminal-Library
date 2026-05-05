@@ -1,4 +1,4 @@
-Member|member123|Member123|Good Member|Bahria town china|500|Standard|0
-Admin|admin123|Admin123|OOP Legend|ned university karachi
-Member|ebad1234|Ebad1234|Ebad Ziad Adam|Karachi Sindh Pakistan|2512|Premium|0
-Member|imran123|Imran123|Imran Khan|Islamabad jail|500|Standard|0
+Member|member123|Member123|Good Member|Bahria town china|4090|Premium|0|B7931|B5316
+Admin|ooplegend|Admin123|OOP Legend|ned university karachi
+Member|ebad1234|Ebad1234|Ebad Ziad Adam|Karachi Sindh Pakistan Asia|887|Premium|2|B7580
+Member|imran123|Imran123|Imran Khan|Islamabad jail|4080|Premium|0|B9538|B9641

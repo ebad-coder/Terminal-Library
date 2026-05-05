@@ -31,7 +31,7 @@ class Notification {
         bool is_read();
         void mark_as_read();
 
-        const std::string convert_to_string() const;
+        const std::string convert_to_string();
 
-        friend std::ostream& operator<<(std::ostream& os, const Notification& notification);
+        friend std::ostream& operator<<(std::ostream& os, Notification& notification);
 };
