@@ -865,11 +865,18 @@ void LibrarySystem::handle_donate_resource(Member* member)
     // Check if the user cancelled the form
     if (!resource_to_donate) return;
 
-    account_manager.send_donation_request(member, resource_to_donate.get());
-    resource_manager.add_resource_to_pending(std::move(resource_to_donate));
+    if (account_manager.send_donation_request(member, resource_to_donate.get()))
+    {
+        resource_manager.add_resource_to_pending(std::move(resource_to_donate));
+        UserInterface::add_text_to_buffer("The resource you donated has been added to the pending list.\n");
+        UserInterface::add_text_to_buffer("It will be added to our collection when an admin accept your donated resource.\n");
+    }
+    else
+    {
+        UserInterface::add_text_to_buffer("There was an error sending donation request to library admin.\n");
+        UserInterface::add_text_to_buffer("Please try again later.");
+    }
 
-    UserInterface::add_text_to_buffer("The resource you donated has been added to the pending list.\n");
-    UserInterface::add_text_to_buffer("It will be added to our collection when an admin accept your donated resource.\n");
     UserInterface::show_buffered_message();
 }
 
@@ -1119,6 +1126,11 @@ void LibrarySystem::handle_send_notification()
         if (title.empty() || message.empty()) {
             error_message = "Error: Title and Message cannot be empty.";
             continue;
+        }
+
+        if (resource_manager.get_resource_with_id(resource_id) == nullptr)
+        {
+            error_message = "Error: No resource found with ID " + resource_id;
         }
 
         if (choice == 1) // Direct Message

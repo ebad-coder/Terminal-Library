@@ -136,10 +136,21 @@ int AccountManager::broadcast_notification_to_members(const std::string& s, cons
 
 
 // sends donation request to library admin
-void AccountManager::send_donation_request(Member* member, Resource* resource)
+bool AccountManager::send_donation_request(Member* member, Resource* resource)
 {
-    Admin* admin = static_cast<Admin*>(get_account_with_username("ooplegend"));
+    Admin* admin = nullptr;
+
+    for (const auto& account_entry : accounts_database)
+    {
+        if (account_entry.second->get_account_type() == AccountType::Admin)
+        {
+            admin = static_cast<Admin*>(account_entry.second.get());
+            break;
+        }
+    }
     
+    if (!admin) return false;
+
     admin->handle_notification(std::make_unique<Notification>(
         member->get_username(),
         admin->get_username(),
@@ -149,6 +160,8 @@ void AccountManager::send_donation_request(Member* member, Resource* resource)
         false,
         resource->get_resource_id()
     ));
+
+    return true;
 }
 
 

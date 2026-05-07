@@ -1,87 +1,172 @@
-A7285|Advancements in Renewable Energy|Engineering|05/09/2022|1|55|Power Journal|Liam Neeson|Issue 12
-B7829|Harry Potter and the Sorcerer's Stone|Fantasy|26/06/1997|1|60|978-0590353427|J.K. Rowling|Scholastic|1st|English
-B5612|The Great Gatsby|Fiction|10/04/1925|1|65|978-0743273565|F. Scott Fitzgerald|Scribner|1st|English
-A4809|The Trojan War: Myth or Reality?|History|14/04/2021|1|60|Archaeology Today|Heinrich Schliemann|Issue 29
-J7842|Russian Review|Literature|15/01/2024|1|80|0036-0341|Eve Levin|Wiley|83
-J1560|Journal of Fantasy and Science Fiction|Literature|01/02/2024|1|65|1095-8258|Gordon Van Gelder|Spilogale Inc|146
-A4028|Climate Change Protocols|Environment|22/04/2023|1|50|Earth Today|Emma Watson|Issue 88
-B8213|Crime and Punishment|Fiction|01/01/1866|1|55|978-0140449136|Fyodor Dostoevsky|Penguin Classics|Reprint|English
-A7814|The Roaring Twenties|History|14/02/2020|1|50|Past Times|Ken Burns|Issue 19
-B2408|The Lord of the Rings|Fantasy|29/07/1954|1|55|978-0544003415|J.R.R. Tolkien|Mariner Books|1st|English
-A3912|Oral Traditions in Ancient Greece|History|30/08/2023|1|70|Classical World|Plato|Issue 17
-J1958|International Journal of Robotics|Engineering|20/02/2024|1|75|0278-3649|Isaac Asimov|Sage|50|imran123
-B2370|The Alchemist|Fiction|01/01/1988|1|50|978-0062315007|Paulo Coelho|HarperOne|1st|English
-J8352|Journal of Youth and Adolescence|Sociology|15/12/2023|1|70|0047-2891|Stanley Hall|Springer|52
-B2508|Thinking in Java|Computer Science|20/02/1998|1|50|978-0131872486|Bruce Eckel|Prentice Hall|1st|English
-J9851|Cybersecurity Quarterly|Technology|15/11/2023|1|70|1939-0114|Bruce Schneier|IEEE|14
-B8027|The Wealth of Nations|Economics|09/03/1776|1|50|978-0553585971|Adam Smith|Bantam Classics|Reprint|English
-A9274|CRISPR and the Future of Gene Editing|Biology|15/05/2022|1|65|Gene Today|Sarah Zhang|Issue 12
-J5807|Comparative Literature|Literature|01/03/2024|1|80|0010-4124|Thomas Beebee|Duke University Press|76
-J2185|Early Childhood Research|Education|01/03/2024|1|65|0885-2006|Jean Piaget|Elsevier|39
 J5384|Early Childhood Research|Education|01/03/2024|1|65|0885-2006|Jean Piaget|Elsevier|39
 J9436|Harvard Business Review|Business|01/01/2024|1|75|0017-8012|Adi Ignatius|HBR Publishing|102
+A2951|Existentialism in the 19th Century|Philosophy|07/07/2020|1|65|Philosophy Now|Jean-Paul Sartre|Issue 40
+J1835|Quarterly Journal of Economics|Economics|15/02/2024|1|65|0033-5533|Robert Barro|Oxford Press|139
+J1582|Medical Research Monthly|Medicine|05/02/2024|1|80|0959-8138|Sarah Jenkins|HealthPress|45
+B7286|The Iliad|Poetry|01/01/1990|1|50|978-0140275360|Homer|Penguin Classics|Reprint|English
+B9057|Moby-Dick|Fiction|18/10/1851|1|55|978-0142437247|Herman Melville|Penguin Classics|1st|English
+A3520|Philosophy for Children|Philosophy|28/02/2023|1|50|Thinker's Weekly|Socrates|Issue 55
+B3916|The Selfish Gene|Biology|01/01/1976|1|55|978-0192860927|Richard Dawkins|OUP|1st|English
+A7150|World Building Techniques|Literature|21/09/2021|1|50|Fantasy Writer|George R.R. Martin|Issue 8
+J3590|International Journal of Maritime History|History|15/11/2023|1|65|0843-8714|David Starkey|SAGE|35
+A8914|research paper|science|12/12/2023|1|50|beginner guide|ebad|issue 02
+B5827|Atomic Habits|Self-Help|16/10/2018|1|50|978-0735211292|James Clear|Avery|1st|English
+B6821|The Pragmatic Programmer|Software Engineering|20/10/1999|1|50|978-0201616224|Andrew Hunt|Addison-Wesley|1st|English
+B9420|The Catcher in the Rye|Fiction|16/07/1951|1|50|978-0316769488|J.D. Salinger|Little, Brown|1st|English
+B2183|One Hundred Years of Solitude|Fiction|05/06/1967|1|50|978-0060883287|Gabriel Garcia Marquez|Harper Perennial|1st|English
+B6048|The Brothers Karamazov|Fiction|01/01/1880|1|50|978-0374528379|Fyodor Dostoevsky|Farrar, Straus and Giroux|Reprint|English
+B1863|The Hobbit|Fantasy|21/09/1937|1|50|978-0547928227|J.R.R. Tolkien|Houghton Mifflin|1st|English
+B4719|Animal Farm|Fiction|17/08/1945|1|55|978-0451526342|George Orwell|Signet Classic|1st|English
+A6517|The Roaring Twenties|History|14/02/2020|1|50|Past Times|Ken Burns|Issue 19
+J6728|Journal of Archaeological Science|History|01/02/2024|1|75|0305-4403|Thilo Rehren|Elsevier|162
+B7649|Introduction to Algorithms|Computer Science|31/07/2009|1|80|978-0262033848|Thomas H. Cormen|MIT Press|3rd|English
+B1067|The Brothers Karamazov|Fiction|01/01/1880|1|50|978-0374528379|Fyodor Dostoevsky|Farrar, Straus and Giroux|Reprint|English
+J5620|Political Science Quarterly|Political Science|01/01/2024|1|80|0032-3195|Woodrow Wilson|Wiley|139
+B9715|Crime and Punishment|Fiction|01/01/1866|1|55|978-0140449136|Fyodor Dostoevsky|Penguin Classics|Reprint|English
+B2967|Design Patterns|Computer Science|21/10/1994|1|65|978-0201633610|Erich Gamma|Addison-Wesley|1st|English
+A9207|Censorship in the Modern Age|Political Science|10/09/2023|1|55|Freedom Journal|Noam Chomsky|Issue 18
+B9641|Animal Farm|Fiction|17/08/1945|0|55|978-0451526342|George Orwell|Signet Classic|1st|English
+B3842|The Little Prince|Fiction|06/04/1943|1|65|978-0156012195|Antoine de Saint-Exupery|Harcourt|1st|English
+J1426|Latin American Literary Review|Literature|15/12/2023|1|75|0047-4134|Yvette Miller|LALR Press|51
+B2395|Clean Code|Software Engineering|01/08/2008|1|55|978-0132350884|Robert C. Martin|Prentice Hall|1st|English
+A6093|Visions of the Afterlife|Religion|09/08/2021|1|50|Theology Weekly|Thomas Aquinas|Issue 22
+A4862|A New Approach to Memory Safety|Technology|04/11/2023|1|65|Tech Horizons|Jane Doe|Issue 45
+B9538|War and Peace|Fiction|01/01/1869|0|60|978-1400079988|Leo Tolstoy|Vintage Classics|Reprint|English
+A1630|Ancient Rome Discoveries|History|14/08/2021|1|50|History Now|Mary Beard|Issue 22
+J8064|Journal of American History|History|01/03/2024|1|75|0021-8723|David Blight|OUP|110
+J2074|American Sociological Review|Sociology|15/02/2024|1|75|0003-1224|Omar Lizardo|SAGE|89
+B8604|Neuromancer|Sci-Fi|01/07/1984|1|60|978-0441569595|William Gibson|Ace|1st|English
+J8931|Harvard Business Review|Business|01/01/2024|1|75|0017-8012|Adi Ignatius|HBR Publishing|102
+B3851|A Brief History of Time|Physics|01/03/1988|1|50|978-0553380163|Stephen Hawking|Bantam Books|1st|English
+B8159|Thinking, Fast and Slow|Psychology|25/10/2011|1|55|978-0374275631|Daniel Kahneman|Farrar, Straus and Giroux|1st|English
+J7842|Russian Review|Literature|15/01/2024|1|80|0036-0341|Eve Levin|Wiley|83
+J3578|Journal of Philosophy|Philosophy|01/03/2024|1|75|0022-362X|John Dewey|Columbia University|121
+J2845|Journal of Computer Science|Academic|15/01/2024|1|70|1549-3636|John Smith|SciencePub|12
+B6130|Dune|Sci-Fi|01/08/1965|1|65|978-0441172719|Frank Herbert|Chilton Books|1st|English
+A1976|Teenage Angst in Post-War America|Sociology|18/11/2020|1|60|Youth Studies|Erik Erikson|Issue 5
+A3085|World Building Techniques|Literature|21/09/2021|1|50|Fantasy Writer|George R.R. Martin|Issue 8
+B2675|The Alchemist|Fiction|01/01/1988|1|50|978-0062315007|Paulo Coelho|HarperOne|1st|English
+B8537|Sapiens: A Brief History of Humankind|History|04/09/2011|1|60|978-0062316097|Yuval Noah Harari|Harper|1st|English
+B7039|To Kill a Mockingbird|Fiction|11/07/1960|1|50|978-0060935467|Harper Lee|Harper Perennial|1st|English
+B2508|Thinking in Java|Computer Science|20/02/1998|1|50|978-0131872486|Bruce Eckel|Prentice Hall|1st|English
+A8319|Cognitive Behavioral Therapy Shifts|Psychology|03/06/2023|1|65|Mind Today|Aaron Beck|Issue 7
+J1469|Journal of Mythological Studies|Literature|15/10/2023|1|60|0000-1111|Carl Jung|MythPress|12
+J5807|Comparative Literature|Literature|01/03/2024|1|80|0010-4124|Thomas Beebee|Duke University Press|76
+J2185|Early Childhood Research|Education|01/03/2024|1|65|0885-2006|Jean Piaget|Elsevier|39
+A9274|CRISPR and the Future of Gene Editing|Biology|15/05/2022|1|65|Gene Today|Sarah Zhang|Issue 12
+B8027|The Wealth of Nations|Economics|09/03/1776|1|50|978-0553585971|Adam Smith|Bantam Classics|Reprint|English
+J9851|Cybersecurity Quarterly|Technology|15/11/2023|1|70|1939-0114|Bruce Schneier|IEEE|14
+J7361|The Lancet|Medicine|20/02/2024|1|75|0140-6736|Richard Horton|Elsevier|402
+B4590|The Lord of the Rings|Fantasy|29/07/1954|1|55|978-0544003415|J.R.R. Tolkien|Mariner Books|1st|English
+J5491|Modern Fiction Studies|Literature|01/12/2023|1|70|0026-7724|John Doe|Johns Hopkins Press|69
+B7580|To Kill a Mockingbird|Fiction|11/07/1960|1|50|978-0060935467|Harper Lee|Harper Perennial|1st|English
+J2743|Historical Review|History|01/10/2023|1|55|0013-8266|Edward Gibbon|Oxford Press|138
+A9604|Existentialism in the 19th Century|Philosophy|07/07/2020|1|65|Philosophy Now|Jean-Paul Sartre|Issue 40
+B1428|Pride and Prejudice|Fiction|28/01/1813|1|50|978-0141439518|Jane Austen|Penguin Classics|Reprint|English
+J9065|Political Science Quarterly|Political Science|01/01/2024|1|80|0032-3195|Woodrow Wilson|Wiley|139
+J3495|American Sociological Review|Sociology|15/02/2024|1|75|0003-1224|Omar Lizardo|SAGE|89
+B7931|Fahrenheit 451|Fiction|19/10/1953|0|50|978-1451673319|Ray Bradbury|Simon & Schuster|1st|English
+B4502|The Wealth of Nations|Economics|09/03/1776|1|50|978-0553585971|Adam Smith|Bantam Classics|Reprint|English
+J4627|Global Economic Review|Economics|15/03/2024|1|60|1225-651X|Milton Friedman|EconWorld|32
+A4281|Children's Literature Evolution|Education|12/10/2022|1|70|Edu Journal|Roald Dahl|Issue 27
+A8157|Morality in Russian Literature|Literature|12/12/2021|1|60|Slavic Review|Leo Tolstoy|Issue 14
+J3281|Journal of Religion|Religion|01/01/2024|1|60|0022-4189|Richard Rosengarten|UChicago Press|104
+B9374|The Divine Comedy|Poetry|01/01/1320|1|65|978-0142437223|Dante Alighieri|Penguin Classics|Reprint|English
+J6910|The Lancet|Medicine|20/02/2024|1|75|0140-6736|Richard Horton|Elsevier|402
+J9042|Environmental Science Letters|Environment|01/03/2024|1|60|1748-9326|Richard Tree|IOP Publishing|15
+J7518|Journal of Democracy|Political Science|15/01/2024|1|75|1045-5736|Larry Diamond|Johns Hopkins Press|35
+A3206|Microplastics in the Ocean|Environment|05/04/2021|1|55|Marine Life|Sylvia Earle|Issue 20
+A4310|The Hero's Journey|Literature|16/06/2018|1|55|Mythology Today|Joseph Campbell|Issue 2
+A3472|A New Approach to Memory Safety|Technology|04/11/2023|1|65|Tech Horizons|Jane Doe|Issue 45
+B8302|Fahrenheit 451|Fiction|19/10/1953|1|50|978-1451673319|Ray Bradbury|Simon & Schuster|1st|English
+J9734|American Journal of Bioethics|Science|01/02/2024|1|70|1526-5161|Arthur Caplan|Taylor & Francis|24
+A6218|Quantum Supremacy Reached|Physics|12/03/2022|1|60|Quantum Daily|Albert Chen|Issue 102
+J6439|Nature Physics|Physics|10/12/2023|1|70|1745-2473|Michael Faraday|Nature Publishing|20
+J3157|Journal of Youth and Adolescence|Sociology|15/12/2023|1|70|0047-2891|Stanley Hall|Springer|52
+J6271|Sociology Today|Sociology|10/01/2024|1|60|0038-0253|Jane Addams|SAGE Publications|58
+A5381|Military Strategy in Fiction|History|23/11/2019|1|65|War Studies|Sun Tzu|Issue 3
+B2793|The C++ Programming Language|Computer Science|12/05/2013|1|50|978-0321563842|Bjarne Stroustrup|Addison-Wesley|4th|English
+J3871|Environmental Science Letters|Environment|01/03/2024|1|60|1748-9326|Richard Tree|IOP Publishing|15
+A7092|Cybersecurity in the 21st Century|Technology|30/10/2023|1|70|Cyber Safe|Kevin Mitnick|Issue 9
+B5982|The Little Prince|Fiction|06/04/1943|1|65|978-0156012195|Antoine de Saint-Exupery|Harcourt|1st|English
+A4615|Magical Realism Explained|Literature|11/01/2023|1|55|Art & Text|Jorge Luis Borges|Issue 6
+B8750|Hamlet|Play|01/01/1603|1|55|978-0743477123|William Shakespeare|Simon & Schuster|1st|English
+J5714|Journal of Modern Art|Arts|10/01/2024|1|65|1549-3637|Pablo Picasso|ArtPub|22
+J8276|American Journal of Bioethics|Science|01/02/2024|1|70|1526-5161|Arthur Caplan|Taylor & Francis|24
+A1239|Whaling Industry of the 1800s|History|02/02/2020|1|50|Maritime History|Nathaniel Philbrick|Issue 11
+J5280|Russian Review|Literature|15/01/2024|1|80|0036-0341|Eve Levin|Wiley|83
+A7645|Philosophy for Children|Philosophy|28/02/2023|1|50|Thinker's Weekly|Socrates|Issue 55
+J3056|Education Quarterly|Education|15/01/2024|1|75|0013-161X|Maria Montessori|Taylor & Francis|88
+B5894|Brave New World|Fiction|01/01/1932|1|60|978-0060850524|Aldous Huxley|Harper Perennial|1st|English
+J3104|Journal of Computer Science|Academic|15/01/2024|1|70|1549-3636|John Smith|SciencePub|12
+J6481|Journal of Democracy|Political Science|15/01/2024|1|75|1045-5736|Larry Diamond|Johns Hopkins Press|35
+A7942|The Birth of the Modern Novel|Literature|26/09/2022|1|70|Literary Heritage|Harold Bloom|Issue 47
+A5931|Women in the 19th Century|Sociology|08/03/2023|1|60|Gender Studies|Gloria Steinem|Issue 42
+A8726|Marriage and Society|Sociology|19/05/2022|1|50|Social Dynamics|Emile Durkheim|Issue 21
+J2906|Journal of American History|History|01/03/2024|1|75|0021-8723|David Blight|OUP|110
+A3048|Productivity in the Workplace|Business|20/05/2022|1|70|Corporate Life|Sheryl Sandberg|Issue 44
+B5612|The Great Gatsby|Fiction|10/04/1925|1|65|978-0743273565|F. Scott Fitzgerald|Scribner|1st|English
+A4809|The Trojan War: Myth or Reality?|History|14/04/2021|1|60|Archaeology Today|Heinrich Schliemann|Issue 29
 A9364|Stock Market Trends 2024|Business|10/01/2024|1|70|Finance Weekly|Gordon Gekko|Issue 501
 A3175|A New Approach to Memory Safety|Technology|04/11/2023|1|65|Tech Horizons|Jane Doe|Issue 45
 B9184|The C++ Programming Language|Computer Science|12/05/2013|1|50|978-0321563842|Bjarne Stroustrup|Addison-Wesley|4th|English
 J4932|Journal of Philosophy|Philosophy|01/03/2024|1|75|0022-362X|John Dewey|Columbia University|121
 J8219|Nature Physics|Physics|10/12/2023|1|70|1745-2473|Michael Faraday|Nature Publishing|20
-J1469|Journal of Mythological Studies|Literature|15/10/2023|1|60|0000-1111|Carl Jung|MythPress|12
-A8319|Cognitive Behavioral Therapy Shifts|Psychology|03/06/2023|1|65|Mind Today|Aaron Beck|Issue 7
-J2906|Journal of American History|History|01/03/2024|1|75|0021-8723|David Blight|OUP|110
-A8726|Marriage and Society|Sociology|19/05/2022|1|50|Social Dynamics|Emile Durkheim|Issue 21
-A5931|Women in the 19th Century|Sociology|08/03/2023|1|60|Gender Studies|Gloria Steinem|Issue 42
-A7942|The Birth of the Modern Novel|Literature|26/09/2022|1|70|Literary Heritage|Harold Bloom|Issue 47
-J6481|Journal of Democracy|Political Science|15/01/2024|1|75|1045-5736|Larry Diamond|Johns Hopkins Press|35
-J3104|Journal of Computer Science|Academic|15/01/2024|1|70|1549-3636|John Smith|SciencePub|12
-B5894|Brave New World|Fiction|01/01/1932|1|60|978-0060850524|Aldous Huxley|Harper Perennial|1st|English
-J3056|Education Quarterly|Education|15/01/2024|1|75|0013-161X|Maria Montessori|Taylor & Francis|88
-B1492|Introduction to Algorithms|Computer Science|31/07/2009|1|80|978-0262033848|Thomas H. Cormen|MIT Press|3rd|English
-J5280|Russian Review|Literature|15/01/2024|1|80|0036-0341|Eve Levin|Wiley|83
-A7645|Philosophy for Children|Philosophy|28/02/2023|1|50|Thinker's Weekly|Socrates|Issue 55
-J5714|Journal of Modern Art|Arts|10/01/2024|1|65|1549-3637|Pablo Picasso|ArtPub|22
-A1239|Whaling Industry of the 1800s|History|02/02/2020|1|50|Maritime History|Nathaniel Philbrick|Issue 11
-J8276|American Journal of Bioethics|Science|01/02/2024|1|70|1526-5161|Arthur Caplan|Taylor & Francis|24
-B8750|Hamlet|Play|01/01/1603|1|55|978-0743477123|William Shakespeare|Simon & Schuster|1st|English
-B2793|The C++ Programming Language|Computer Science|12/05/2013|1|50|978-0321563842|Bjarne Stroustrup|Addison-Wesley|4th|English
-J3871|Environmental Science Letters|Environment|01/03/2024|1|60|1748-9326|Richard Tree|IOP Publishing|15
-J3590|International Journal of Maritime History|History|15/11/2023|1|65|0843-8714|David Starkey|SAGE|35
-A7092|Cybersecurity in the 21st Century|Technology|30/10/2023|1|70|Cyber Safe|Kevin Mitnick|Issue 9
-B5982|The Little Prince|Fiction|06/04/1943|1|65|978-0156012195|Antoine de Saint-Exupery|Harcourt|1st|English
-A5381|Military Strategy in Fiction|History|23/11/2019|1|65|War Studies|Sun Tzu|Issue 3
+B7829|Harry Potter and the Sorcerer's Stone|Fantasy|26/06/1997|1|60|978-0590353427|J.K. Rowling|Scholastic|1st|English
+A7285|Advancements in Renewable Energy|Engineering|05/09/2022|1|55|Power Journal|Liam Neeson|Issue 12
+A8369|Inflation Rates Globally|Economics|11/11/2023|1|60|Econ World|Janet Yellen|Issue 89
+J1690|Historical Review|History|01/10/2023|1|55|0013-8266|Edward Gibbon|Oxford Press|138
+B2370|The Alchemist|Fiction|01/01/1988|1|50|978-0062315007|Paulo Coelho|HarperOne|1st|English
+J8352|Journal of Youth and Adolescence|Sociology|15/12/2023|1|70|0047-2891|Stanley Hall|Springer|52
+B8213|Crime and Punishment|Fiction|01/01/1866|1|55|978-0140449136|Fyodor Dostoevsky|Penguin Classics|Reprint|English
+A4028|Climate Change Protocols|Environment|22/04/2023|1|50|Earth Today|Emma Watson|Issue 88
+J1560|Journal of Fantasy and Science Fiction|Literature|01/02/2024|1|65|1095-8258|Gordon Van Gelder|Spilogale Inc|146
+A7814|The Roaring Twenties|History|14/02/2020|1|50|Past Times|Ken Burns|Issue 19
+A6741|Quantum Supremacy Reached|Physics|12/03/2022|1|60|Quantum Daily|Albert Chen|Issue 102
 B8461|Don Quixote|Fiction|01/01/1605|1|60|978-0060934347|Miguel de Cervantes|Harper Perennial|Reprint|English
-A5402|Stock Market Trends 2024|Business|10/01/2024|1|70|Finance Weekly|Gordon Gekko|Issue 501
 A2094|Dystopian Literature Analysis|Literature|19/04/2021|1|50|Literary Digest|Margaret Atwood|Issue 11
+A5402|Stock Market Trends 2024|Business|10/01/2024|1|70|Finance Weekly|Gordon Gekko|Issue 501
+A8124|Racial Injustice in Literature|Literature|25/08/2022|1|55|Culture Review|Toni Morrison|Issue 34
 B8425|The Lean Startup|Business|13/09/2011|1|70|978-0307887894|Eric Ries|Crown Business|1st|English
 J8732|Education Quarterly|Education|15/01/2024|1|75|0013-161X|Maria Montessori|Taylor & Francis|88
-A4615|Magical Realism Explained|Literature|11/01/2023|1|55|Art & Text|Jorge Luis Borges|Issue 6
+J4159|Mind|Philosophy|01/02/2024|1|70|0026-4423|A.W. Moore|OUP|133
 B3051|Clean Code|Software Engineering|01/08/2008|1|55|978-0132350884|Robert C. Martin|Prentice Hall|1st|English
 J6394|Journal of Fantasy and Science Fiction|Literature|01/02/2024|1|65|1095-8258|Gordon Van Gelder|Spilogale Inc|146
-J4159|Mind|Philosophy|01/02/2024|1|70|0026-4423|A.W. Moore|OUP|133
-A3048|Productivity in the Workplace|Business|20/05/2022|1|70|Corporate Life|Sheryl Sandberg|Issue 44
-J7361|The Lancet|Medicine|20/02/2024|1|75|0140-6736|Richard Horton|Elsevier|402
-B4590|The Lord of the Rings|Fantasy|29/07/1954|1|55|978-0544003415|J.R.R. Tolkien|Mariner Books|1st|English
-J5491|Modern Fiction Studies|Literature|01/12/2023|1|70|0026-7724|John Doe|Johns Hopkins Press|69
-B7580|To Kill a Mockingbird|Fiction|11/07/1960|0|50|978-0060935467|Harper Lee|Harper Perennial|1st|English
-J2743|Historical Review|History|01/10/2023|1|55|0013-8266|Edward Gibbon|Oxford Press|138
-A9604|Existentialism in the 19th Century|Philosophy|07/07/2020|1|65|Philosophy Now|Jean-Paul Sartre|Issue 40
-B1428|Pride and Prejudice|Fiction|28/01/1813|1|50|978-0141439518|Jane Austen|Penguin Classics|Reprint|English
+J1958|International Journal of Robotics|Engineering|20/02/2024|1|75|0278-3649|Isaac Asimov|Sage|50|imran123
+B2408|The Lord of the Rings|Fantasy|29/07/1954|1|55|978-0544003415|J.R.R. Tolkien|Mariner Books|1st|English
+A3912|Oral Traditions in Ancient Greece|History|30/08/2023|1|70|Classical World|Plato|Issue 17
+B6275|1984|Fiction|08/06/1949|1|55|978-0451524935|George Orwell|Signet Classic|1st|English
+B8519|Harry Potter and the Sorcerer's Stone|Fantasy|26/06/1997|1|60|978-0590353427|J.K. Rowling|Scholastic|1st|English
+A1594|Allegory in Political Writing|Political Science|22/07/2022|1|65|PolitiReview|Hannah Arendt|Issue 31
+J8105|Journal of Finance|Business|15/11/2023|1|65|0022-1082|Warren Buffet|Wiley|78
+B4873|Atomic Habits|Self-Help|16/10/2018|1|50|978-0735211292|James Clear|Avery|1st|English
+J9348|Feminist Review|Sociology|15/11/2023|1|80|0141-7789|Bell Hooks|SAGE|135
+A6958|Ancient Rome Discoveries|History|14/08/2021|1|50|History Now|Mary Beard|Issue 22
+A5183|The Impact of AI on Healthcare|Medicine|18/07/2023|1|75|Health Informatics|David Lee|Issue 33
+B1507|Cosmos|Science|01/01/1980|1|50|978-0345331359|Carl Sagan|Random House|1st|English
+A4721|Productivity in the Workplace|Business|20/05/2022|1|70|Corporate Life|Sheryl Sandberg|Issue 44
+B2179|1984|Fiction|08/06/1949|1|55|978-0451524935|George Orwell|Signet Classic|1st|English
+B5429|The Art of Computer Programming|Computer Science|10/01/1968|1|75|978-0201896831|Donald Knuth|Addison-Wesley|1st|English
+B3148|Brave New World|Fiction|01/01/1932|1|60|978-0060850524|Aldous Huxley|Harper Perennial|1st|English
+J9510|Quarterly Journal of Economics|Economics|15/02/2024|1|65|0033-5533|Robert Barro|Oxford Press|139
+A1784|The Renaissance Art Revival|Arts|11/02/2020|1|60|Art History Monthly|Giorgio Vasari|Issue 88
+A8250|Advancements in Renewable Energy|Engineering|05/09/2022|1|55|Power Journal|Liam Neeson|Issue 12
+B7491|Sapiens: A Brief History of Humankind|History|04/09/2011|1|60|978-0062316097|Yuval Noah Harari|Harper|1st|English
+J7194|Journal of Psychology|Psychology|15/09/2023|1|80|0022-3980|Sigmund Freud|Routledge|157
 J8695|Journal of Military History|History|01/01/2024|1|50|0899-3718|Bruce Vandervort|SMH|88
-A9563|The Psychology of Social Media|Psychology|10/08/2023|1|50|Mind Review|Jonathan Haidt|Issue 4
-A6497|Children's Literature Evolution|Education|12/10/2022|1|70|Edu Journal|Roald Dahl|Issue 27
+J2486|Marine Biology Annual|Biology|01/12/2023|1|55|0025-3154|Jacques Cousteau|BioPress|18
 J7903|Medical Research Monthly|Medicine|05/02/2024|1|80|0959-8138|Sarah Jenkins|HealthPress|45
 B6304|Anna Karenina|Fiction|01/01/1877|1|55|978-0143035008|Leo Tolstoy|Penguin Classics|Reprint|English
-B5072|A Brief History of Time|Physics|01/03/1988|1|50|978-0553380163|Stephen Hawking|Bantam Books|1st|English
-A5910|Deep Learning in Autonomous Vehicles|Technology|22/11/2023|1|80|Tech Innovator|Andrew Ng|Issue 55
 B5341|The Pragmatic Programmer|Software Engineering|20/10/1999|1|50|978-0201616224|Andrew Hunt|Addison-Wesley|1st|English
 B1356|Clean Code|Software Engineering|01/08/2008|1|55|978-0132350884|Robert C. Martin|Prentice Hall|1st|English
-J4382|Sociology Today|Sociology|10/01/2024|1|60|0038-0253|Jane Addams|SAGE Publications|58
 B4618|Sapiens: A Brief History of Humankind|History|04/09/2011|1|60|978-0062316097|Yuval Noah Harari|Harper|1st|English
-J5038|Journal of Finance|Business|15/11/2023|1|65|0022-1082|Warren Buffet|Wiley|78
 A9145|Climate Change Protocols|Environment|22/04/2023|1|50|Earth Today|Emma Watson|Issue 88
-A6741|Quantum Supremacy Reached|Physics|12/03/2022|1|60|Quantum Daily|Albert Chen|Issue 102
+J5038|Journal of Finance|Business|15/11/2023|1|65|0022-1082|Warren Buffet|Wiley|78
+A6497|Children's Literature Evolution|Education|12/10/2022|1|70|Edu Journal|Roald Dahl|Issue 27
+A9563|The Psychology of Social Media|Psychology|10/08/2023|1|50|Mind Review|Jonathan Haidt|Issue 4
+J3514|Journal of Psychology|Psychology|15/09/2023|1|80|0022-3980|Sigmund Freud|Routledge|157
 A2846|Inflation Rates Globally|Economics|11/11/2023|1|60|Econ World|Janet Yellen|Issue 89
 A4532|Space Tourism Economics|Business|19/09/2023|1|75|AstroBiz|Elon Musk|Issue 3
-J3514|Journal of Psychology|Psychology|15/09/2023|1|80|0022-3980|Sigmund Freud|Routledge|157
 A8439|Cognitive Behavioral Therapy Shifts|Psychology|03/06/2023|1|65|Mind Today|Aaron Beck|Issue 7
 B4920|Design Patterns|Computer Science|21/10/1994|1|65|978-0201633610|Erich Gamma|Addison-Wesley|1st|English
 J1209|Journal of Mythological Studies|Literature|15/10/2023|1|60|0000-1111|Carl Jung|MythPress|12
@@ -94,109 +179,24 @@ B5316|Object Oriented Thinking In C++|Computer Science|12/01/2014|0|60|123498765
 A1856|Dystopian Literature Analysis|Literature|19/04/2021|1|50|Literary Digest|Margaret Atwood|Issue 11
 A4651|Censorship in the Modern Age|Political Science|10/09/2023|1|55|Freedom Journal|Noam Chomsky|Issue 18
 A5742|The Magic of Storytelling|Education|05/05/2019|1|55|Teacher's Digest|Ken Robinson|Issue 15
-J7518|Journal of Democracy|Political Science|15/01/2024|1|75|1045-5736|Larry Diamond|Johns Hopkins Press|35
-B1740|The Odyssey|Poetry|01/01/1614|1|55|978-0140268867|Homer|Penguin Classics|Reprint|English
-A9052|Racial Injustice in Literature|Literature|25/08/2022|1|55|Culture Review|Toni Morrison|Issue 34
-A4281|Children's Literature Evolution|Education|12/10/2022|1|70|Edu Journal|Roald Dahl|Issue 27
-J3281|Journal of Religion|Religion|01/01/2024|1|60|0022-4189|Richard Rosengarten|UChicago Press|104
-B9374|The Divine Comedy|Poetry|01/01/1320|1|65|978-0142437223|Dante Alighieri|Penguin Classics|Reprint|English
-A8157|Morality in Russian Literature|Literature|12/12/2021|1|60|Slavic Review|Leo Tolstoy|Issue 14
-J6910|The Lancet|Medicine|20/02/2024|1|75|0140-6736|Richard Horton|Elsevier|402
-A6803|Teenage Angst in Post-War America|Sociology|18/11/2020|1|60|Youth Studies|Erik Erikson|Issue 5
-A1098|The Impact of AI on Healthcare|Medicine|18/07/2023|1|75|Health Informatics|David Lee|Issue 33
-A8053|Genetic Engineering Ethics|Science|04/04/2021|1|65|BioEthics|Jennifer Doudna|Issue 9
-A5490|Morality in Russian Literature|Literature|12/12/2021|1|60|Slavic Review|Leo Tolstoy|Issue 14
-J9275|Feminist Review|Sociology|15/11/2023|1|80|0141-7789|Bell Hooks|SAGE|135
 A6193|Genetic Engineering Ethics|Science|04/04/2021|1|65|BioEthics|Jennifer Doudna|Issue 9
-A2509|The Magic of Storytelling|Education|05/05/2019|1|55|Teacher's Digest|Ken Robinson|Issue 15
-B1953|The Great Gatsby|Fiction|10/04/1925|1|65|978-0743273565|F. Scott Fitzgerald|Scribner|1st|English
-J9065|Political Science Quarterly|Political Science|01/01/2024|1|80|0032-3195|Woodrow Wilson|Wiley|139
-J3495|American Sociological Review|Sociology|15/02/2024|1|75|0003-1224|Omar Lizardo|SAGE|89
-B5429|The Art of Computer Programming|Computer Science|10/01/1968|1|75|978-0201896831|Donald Knuth|Addison-Wesley|1st|English
-J6271|Sociology Today|Sociology|10/01/2024|1|60|0038-0253|Jane Addams|SAGE Publications|58
-J3157|Journal of Youth and Adolescence|Sociology|15/12/2023|1|70|0047-2891|Stanley Hall|Springer|52
-J6182|Journal of Artificial Intelligence|Technology|01/01/2024|1|80|1045-0823|Alan Turing|AI Press|45
-B5174|The Hobbit|Fantasy|21/09/1937|1|50|978-0547928227|J.R.R. Tolkien|Houghton Mifflin|1st|English
-J3947|Modern Fiction Studies|Literature|01/12/2023|1|70|0026-7724|John Doe|Johns Hopkins Press|69
-B7296|The C++ Programming Language|Computer Science|12/05/2013|1|50|978-0321563842|Bjarne Stroustrup|Addison-Wesley|4th|English
+J9275|Feminist Review|Sociology|15/11/2023|1|80|0141-7789|Bell Hooks|SAGE|135
 A7428|Allegory in Political Writing|Political Science|22/07/2022|1|65|PolitiReview|Hannah Arendt|Issue 31
 J5143|American Journal of Philology|History|15/03/2024|1|80|0002-9475|Joseph Farrell|Johns Hopkins|145
 B9083|Thinking, Fast and Slow|Psychology|25/10/2011|1|55|978-0374275631|Daniel Kahneman|Farrar, Straus and Giroux|1st|English
-J4627|Global Economic Review|Economics|15/03/2024|1|60|1225-651X|Milton Friedman|EconWorld|32
-B7931|Fahrenheit 451|Fiction|19/10/1953|0|50|978-1451673319|Ray Bradbury|Simon & Schuster|1st|English
-B4502|The Wealth of Nations|Economics|09/03/1776|1|50|978-0553585971|Adam Smith|Bantam Classics|Reprint|English
-B8302|Fahrenheit 451|Fiction|19/10/1953|1|50|978-1451673319|Ray Bradbury|Simon & Schuster|1st|English
-J9734|American Journal of Bioethics|Science|01/02/2024|1|70|1526-5161|Arthur Caplan|Taylor & Francis|24
-J1690|Historical Review|History|01/10/2023|1|55|0013-8266|Edward Gibbon|Oxford Press|138
-A8369|Inflation Rates Globally|Economics|11/11/2023|1|60|Econ World|Janet Yellen|Issue 89
-A8124|Racial Injustice in Literature|Literature|25/08/2022|1|55|Culture Review|Toni Morrison|Issue 34
-A3472|A New Approach to Memory Safety|Technology|04/11/2023|1|65|Tech Horizons|Jane Doe|Issue 45
-A3206|Microplastics in the Ocean|Environment|05/04/2021|1|55|Marine Life|Sylvia Earle|Issue 20
-A4310|The Hero's Journey|Literature|16/06/2018|1|55|Mythology Today|Joseph Campbell|Issue 2
-J6439|Nature Physics|Physics|10/12/2023|1|70|1745-2473|Michael Faraday|Nature Publishing|20
-A6218|Quantum Supremacy Reached|Physics|12/03/2022|1|60|Quantum Daily|Albert Chen|Issue 102
-J9042|Environmental Science Letters|Environment|01/03/2024|1|60|1748-9326|Richard Tree|IOP Publishing|15
-J8105|Journal of Finance|Business|15/11/2023|1|65|0022-1082|Warren Buffet|Wiley|78
-B6275|1984|Fiction|08/06/1949|1|55|978-0451524935|George Orwell|Signet Classic|1st|English
-B8519|Harry Potter and the Sorcerer's Stone|Fantasy|26/06/1997|1|60|978-0590353427|J.K. Rowling|Scholastic|1st|English
-A1594|Allegory in Political Writing|Political Science|22/07/2022|1|65|PolitiReview|Hannah Arendt|Issue 31
-B4873|Atomic Habits|Self-Help|16/10/2018|1|50|978-0735211292|James Clear|Avery|1st|English
-B7039|To Kill a Mockingbird|Fiction|11/07/1960|1|50|978-0060935467|Harper Lee|Harper Perennial|1st|English
-A3085|World Building Techniques|Literature|21/09/2021|1|50|Fantasy Writer|George R.R. Martin|Issue 8
-A1976|Teenage Angst in Post-War America|Sociology|18/11/2020|1|60|Youth Studies|Erik Erikson|Issue 5
-B8537|Sapiens: A Brief History of Humankind|History|04/09/2011|1|60|978-0062316097|Yuval Noah Harari|Harper|1st|English
-B2675|The Alchemist|Fiction|01/01/1988|1|50|978-0062315007|Paulo Coelho|HarperOne|1st|English
-J1426|Latin American Literary Review|Literature|15/12/2023|1|75|0047-4134|Yvette Miller|LALR Press|51
-B2395|Clean Code|Software Engineering|01/08/2008|1|55|978-0132350884|Robert C. Martin|Prentice Hall|1st|English
-B3148|Brave New World|Fiction|01/01/1932|1|60|978-0060850524|Aldous Huxley|Harper Perennial|1st|English
-A1784|The Renaissance Art Revival|Arts|11/02/2020|1|60|Art History Monthly|Giorgio Vasari|Issue 88
-J9510|Quarterly Journal of Economics|Economics|15/02/2024|1|65|0033-5533|Robert Barro|Oxford Press|139
-A8914|research paper|science|12/12/2023|1|50|beginner guide|ebad|issue 02
-B5827|Atomic Habits|Self-Help|16/10/2018|1|50|978-0735211292|James Clear|Avery|1st|English
-B1507|Cosmos|Science|01/01/1980|1|50|978-0345331359|Carl Sagan|Random House|1st|English
-J2486|Marine Biology Annual|Biology|01/12/2023|1|55|0025-3154|Jacques Cousteau|BioPress|18
-B6130|Dune|Sci-Fi|01/08/1965|1|65|978-0441172719|Frank Herbert|Chilton Books|1st|English
-J2845|Journal of Computer Science|Academic|15/01/2024|1|70|1549-3636|John Smith|SciencePub|12
-J3578|Journal of Philosophy|Philosophy|01/03/2024|1|75|0022-362X|John Dewey|Columbia University|121
-B8159|Thinking, Fast and Slow|Psychology|25/10/2011|1|55|978-0374275631|Daniel Kahneman|Farrar, Straus and Giroux|1st|English
-B3851|A Brief History of Time|Physics|01/03/1988|1|50|978-0553380163|Stephen Hawking|Bantam Books|1st|English
-J8931|Harvard Business Review|Business|01/01/2024|1|75|0017-8012|Adi Ignatius|HBR Publishing|102
-B8604|Neuromancer|Sci-Fi|01/07/1984|1|60|978-0441569595|William Gibson|Ace|1st|English
-J2074|American Sociological Review|Sociology|15/02/2024|1|75|0003-1224|Omar Lizardo|SAGE|89
-J8064|Journal of American History|History|01/03/2024|1|75|0021-8723|David Blight|OUP|110
-A1630|Ancient Rome Discoveries|History|14/08/2021|1|50|History Now|Mary Beard|Issue 22
-B9538|War and Peace|Fiction|01/01/1869|0|60|978-1400079988|Leo Tolstoy|Vintage Classics|Reprint|English
-A4862|A New Approach to Memory Safety|Technology|04/11/2023|1|65|Tech Horizons|Jane Doe|Issue 45
-A6093|Visions of the Afterlife|Religion|09/08/2021|1|50|Theology Weekly|Thomas Aquinas|Issue 22
-B3842|The Little Prince|Fiction|06/04/1943|1|65|978-0156012195|Antoine de Saint-Exupery|Harcourt|1st|English
-B9641|Animal Farm|Fiction|17/08/1945|0|55|978-0451526342|George Orwell|Signet Classic|1st|English
-A9207|Censorship in the Modern Age|Political Science|10/09/2023|1|55|Freedom Journal|Noam Chomsky|Issue 18
-B2179|1984|Fiction|08/06/1949|1|55|978-0451524935|George Orwell|Signet Classic|1st|English
-A4721|Productivity in the Workplace|Business|20/05/2022|1|70|Corporate Life|Sheryl Sandberg|Issue 44
-A5183|The Impact of AI on Healthcare|Medicine|18/07/2023|1|75|Health Informatics|David Lee|Issue 33
-A6958|Ancient Rome Discoveries|History|14/08/2021|1|50|History Now|Mary Beard|Issue 22
-J9348|Feminist Review|Sociology|15/11/2023|1|80|0141-7789|Bell Hooks|SAGE|135
-J1582|Medical Research Monthly|Medicine|05/02/2024|1|80|0959-8138|Sarah Jenkins|HealthPress|45
-B7286|The Iliad|Poetry|01/01/1990|1|50|978-0140275360|Homer|Penguin Classics|Reprint|English
-B9420|The Catcher in the Rye|Fiction|16/07/1951|1|50|978-0316769488|J.D. Salinger|Little, Brown|1st|English
-B6821|The Pragmatic Programmer|Software Engineering|20/10/1999|1|50|978-0201616224|Andrew Hunt|Addison-Wesley|1st|English
-B9057|Moby-Dick|Fiction|18/10/1851|1|55|978-0142437247|Herman Melville|Penguin Classics|1st|English
-A7150|World Building Techniques|Literature|21/09/2021|1|50|Fantasy Writer|George R.R. Martin|Issue 8
-B3916|The Selfish Gene|Biology|01/01/1976|1|55|978-0192860927|Richard Dawkins|OUP|1st|English
-A3520|Philosophy for Children|Philosophy|28/02/2023|1|50|Thinker's Weekly|Socrates|Issue 55
-J1835|Quarterly Journal of Economics|Economics|15/02/2024|1|65|0033-5533|Robert Barro|Oxford Press|139
-A2951|Existentialism in the 19th Century|Philosophy|07/07/2020|1|65|Philosophy Now|Jean-Paul Sartre|Issue 40
-B2183|One Hundred Years of Solitude|Fiction|05/06/1967|1|50|978-0060883287|Gabriel Garcia Marquez|Harper Perennial|1st|English
-B6048|The Brothers Karamazov|Fiction|01/01/1880|1|50|978-0374528379|Fyodor Dostoevsky|Farrar, Straus and Giroux|Reprint|English
-B2967|Design Patterns|Computer Science|21/10/1994|1|65|978-0201633610|Erich Gamma|Addison-Wesley|1st|English
-B9715|Crime and Punishment|Fiction|01/01/1866|1|55|978-0140449136|Fyodor Dostoevsky|Penguin Classics|Reprint|English
-J5620|Political Science Quarterly|Political Science|01/01/2024|1|80|0032-3195|Woodrow Wilson|Wiley|139
-J7194|Journal of Psychology|Psychology|15/09/2023|1|80|0022-3980|Sigmund Freud|Routledge|157
-A8250|Advancements in Renewable Energy|Engineering|05/09/2022|1|55|Power Journal|Liam Neeson|Issue 12
-B7491|Sapiens: A Brief History of Humankind|History|04/09/2011|1|60|978-0062316097|Yuval Noah Harari|Harper|1st|English
-B1067|The Brothers Karamazov|Fiction|01/01/1880|1|50|978-0374528379|Fyodor Dostoevsky|Farrar, Straus and Giroux|Reprint|English
-J6728|Journal of Archaeological Science|History|01/02/2024|1|75|0305-4403|Thilo Rehren|Elsevier|162
-A6517|The Roaring Twenties|History|14/02/2020|1|50|Past Times|Ken Burns|Issue 19
-B7649|Introduction to Algorithms|Computer Science|31/07/2009|1|80|978-0262033848|Thomas H. Cormen|MIT Press|3rd|English
-B4719|Animal Farm|Fiction|17/08/1945|1|55|978-0451526342|George Orwell|Signet Classic|1st|English
-B1863|The Hobbit|Fantasy|21/09/1937|1|50|978-0547928227|J.R.R. Tolkien|Houghton Mifflin|1st|English
+B7296|The C++ Programming Language|Computer Science|12/05/2013|1|50|978-0321563842|Bjarne Stroustrup|Addison-Wesley|4th|English
+J3947|Modern Fiction Studies|Literature|01/12/2023|1|70|0026-7724|John Doe|Johns Hopkins Press|69
+J6182|Journal of Artificial Intelligence|Technology|01/01/2024|1|80|1045-0823|Alan Turing|AI Press|45
+B5174|The Hobbit|Fantasy|21/09/1937|1|50|978-0547928227|J.R.R. Tolkien|Houghton Mifflin|1st|English
+A5490|Morality in Russian Literature|Literature|12/12/2021|1|60|Slavic Review|Leo Tolstoy|Issue 14
+A8053|Genetic Engineering Ethics|Science|04/04/2021|1|65|BioEthics|Jennifer Doudna|Issue 9
+J4382|Sociology Today|Sociology|10/01/2024|1|60|0038-0253|Jane Addams|SAGE Publications|58
+B1740|The Odyssey|Poetry|01/01/1614|1|55|978-0140268867|Homer|Penguin Classics|Reprint|English
+A9052|Racial Injustice in Literature|Literature|25/08/2022|1|55|Culture Review|Toni Morrison|Issue 34
+B1492|Introduction to Algorithms|Computer Science|31/07/2009|1|80|978-0262033848|Thomas H. Cormen|MIT Press|3rd|English
+A6803|Teenage Angst in Post-War America|Sociology|18/11/2020|1|60|Youth Studies|Erik Erikson|Issue 5
+B1953|The Great Gatsby|Fiction|10/04/1925|1|65|978-0743273565|F. Scott Fitzgerald|Scribner|1st|English
+A2509|The Magic of Storytelling|Education|05/05/2019|1|55|Teacher's Digest|Ken Robinson|Issue 15
+A1098|The Impact of AI on Healthcare|Medicine|18/07/2023|1|75|Health Informatics|David Lee|Issue 33
+A5910|Deep Learning in Autonomous Vehicles|Technology|22/11/2023|1|80|Tech Innovator|Andrew Ng|Issue 55
+B5072|A Brief History of Time|Physics|01/03/1988|1|50|978-0553380163|Stephen Hawking|Bantam Books|1st|English

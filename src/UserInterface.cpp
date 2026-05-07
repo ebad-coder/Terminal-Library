@@ -180,7 +180,7 @@ int UserInterface::show_admin_dashboard(Account* current_user)
         if (unread_count > 0)
         {
             layout.push_back(separatorEmpty());
-            layout.push_back(text("You have " + std::to_string(unread_count) + " new notification(s)") | color(Color::YellowLight) | blink | center);
+            layout.push_back(text("There is " + std::to_string(unread_count) + " new donation request(s)") | color(Color::YellowLight) | blink | center);
         }
 
         layout.push_back(separatorEmpty());
