@@ -2,7 +2,7 @@
 
 
 
-A robust, terminal-based Library Management System built with modern C++. This project utilizes the FTXUI library to deliver an interactive Text User Interface (TUI) and relies heavily on Object-Oriented Programming (OOP) principles to handle complex business logic and entity relationships. It serves as an excellent 2nd semester OOP project, demonstrating practical applications of memory management, file handling, and scalable software architecture.
+A terminal-based Library Management System built with modern C++. This project utilizes the FTXUI library to deliver an interactive Text User Interface (TUI) and relies heavily on Object-Oriented Programming (OOP) principles to handle business logic and entity relationships. It serves as an excellent 2nd semester OOP project, demonstrating practical applications of memory management, file handling, and scalable software architecture.
 
 
 
@@ -93,23 +93,193 @@ To enhance user experience and maintain system integrity, the application featur
 
 ## Project Features Showcase
 
-
-
 ### User Registration
-
 A new user can register themselves as members of the library. They are shown a form where they can enter their details and open a new account.
-<img src="./screenshots/member_registration.png" />
-
-
+<p align="center">
+  <img src="./screenshots/member_registration.png" width="60%"/>
+</p>
 
 ### User Login
-
 A user can login to their existing account by providing their username and password.
-<img src="./screenshots/account_login.png" />
-
-
+<p align="center">
+  <img src="./screenshots/account_login.png" width="60%" />
+</p>
 
 ### Member Dashboard
-
 A logged-in member can perform any operation from their dashboard. They are shown a welcome message and any unread notifications.
-<img src="./screenshots/member_dashboard.png" />
+<p align="center">
+  <img src="./screenshots/member_dashboard.png" width="60%" />
+</p>
+
+### Search a Resource
+Allow member to search any resource against different criterias (title/category/creator). They are shown the matched resources. Member can select any resource to view its details.
+<p align="center">
+  <img src="./screenshots/search_resource_1.png" width="48%">
+  <img src="./screenshots/search_resource_2.png" width="48%">
+</p>
+
+### View Available Resources
+Allow member to view all the available resources in the catalog. They can select any resource to view its details.
+<p align="center">
+  <img src="./screenshots/search_resource_1.png" width="48%">
+  <img src="./screenshots/view_available_resources_2.png" width="48%">
+</p>
+
+### Borrow a Resource
+Allow member to borrow any available resource. First they search for the resource, then they select the resource they want to borrow, and finally confirm the borrowing.
+<p align="center">
+  <img src="./screenshots/borrow_resource_1.png" width="32%">
+  <img src="./screenshots/borrow_resource_2.png" width="32%">
+  <img src="./screenshots/borrow_resource_3.png" width="32%">
+</p>
+
+### Return a Resource
+Allow member to return a borrowed resource. Confirm to return the selected resource.
+<p align="center">
+  <img src="./screenshots/return_resource_1.png" width="48%">
+  <img src="./screenshots/return_resouce_2.png" width="48%">
+</p>
+
+### Reserve a Resource
+Allow member to reserve an unavailable resource. First they search for the resource to reserve, then they select the resource they want to reserve, and confirm the reservation.
+<p align="center">
+  <img src="./screenshots/borrow_resource_1.png" width="32%">
+  <img src="./screenshots/borrow_resource_2.png" width="32%">
+  <img src="./screenshots/reserve_resource.png" width="32%">
+</p>
+
+### View Inbox
+Allow member to view notifications in their inbox. They can select any notification to view its details.
+<p align="center">
+  <img src="./screenshots/view_inbox_1.png" width="48%">
+  <img src="./screenshots/view_inbox_2.png" width="48%">
+</p>
+
+### View Borrowing History
+Allow member to view his/her borrowing history. Member can select any past transaction to view its details.
+<p align="center">
+  <img src="./screenshots/view_borrowing_history_1.png" width="48%">
+  <img src="./screenshots/view_borrowing_history_2.png" width="48%">
+</p>
+
+### View Balance
+Allow member to view their account balance. Member can also deposit money to their account.
+<p align="center">
+  <img src="./screenshots/view_balance_1.png" width="48%">
+  <img src="./screenshots/view_balance_2.png" width="48%">
+</p>
+
+### View Membership Status
+Allow member to view their membership status and the benefits of each membership tier. A member can upgrade their membership status by donating 3 resources or paying a one-time fee of Rs.2000.
+<p align="center">
+  <img src="./screenshots/view_membership_status.png" width="60%">
+</p>
+
+### View Profile
+Allow member to view their profile details. They can also edit their profile details or permanently close their account.
+<p align="center">
+  <img src="./screenshots/veiw_profile_1.png" width="48%">
+  <img src="./screenshots/view_profile_2.png" width="48%">
+</p>
+
+### Donate a Resource
+Allow member to donate a resource to the library. The Admin first accepts this donated resource, then it is added to the library catalog. First they select which resource type to donate, then enter the details of the donated resource.
+<p align="center">
+  <img src="./screenshots/donate_resource_1.png" width="48%">
+  <img src="./screenshots/donate_resource_2.png" width="48%">
+</p>
+
+### Admin Dashboard
+A logged-in admin can perform any operation from their dashboard. They are shown a welcome message and any unread donation requests.
+<p align="center">
+  <img src="./screenshots/admin_dashboard.png" width="60%">
+</p>
+
+### Add a Resource
+Allow admin to add a new resource to the library catalog. First they select the resource type, then enter the details of the resource to add through a form.
+<p align="center">
+  <img src="./screenshots/donate_resource_1.png" width="48%">
+  <img src="./screenshots/donate_resource_2.png" width="48%">
+</p>
+
+### Update a Resource
+Allow admin to update an existing resource. First they search for the resource to update, then update the details of the selected resource through a form.
+<p align="center">
+  <img src="./screenshots/borrow_resource_1.png" width="48%">
+  <img src="./screenshots/update_resource.png" width="48%">
+</p>
+
+### Remove a Resource
+Allow admin to remove a resource from the library catalog. First they search for the resource to remove, then confirm the operation.
+<p align="center">
+  <img src="./screenshots/borrow_resource_1.png" width="48%">
+  <img src="./screenshots/remove_resource.png" width="48%">
+</p>
+
+### View All Members
+Allow admin to view all registered members in the library. They can select any member to view their details. They can also view their complete borrowing history.
+<p align="center">
+  <img src="./screenshots/view_all_members_1.png" width="48%">
+  <img src="./screenshots/view_all_members_2.png" width="48%">
+</p>
+
+### Send a Notification
+Allow admin to send a notification to a specific member or to all members of the library. They can write the message through a form.
+<p align="center">
+  <img src="./screenshots/send_notification_1.png" width="48%">
+  <img src="./screenshots/send_notification_2.png" width="48%">
+</p>
+
+### View Donation Requests
+Allow admin to view resource donation requests submitted by members. They can review, accept, or reject the request.
+<p align="center">
+  <img src="./screenshots/view_donation_requests_1.png" width="48%">
+  <img src="./screenshots/view_donation_requests_2.png" width="48%">
+</p>
+
+### Generate a Report
+Allow admin to generate a report about all the issued and overdue resources. They can see the details of who has borrowed what, and also the number of days since the resource is due.
+<p align="center">
+  <img src="./screenshots/generate_report.png" width="60%">
+</p>
+
+
+
+## Project Structure
+
+* src/: Contains all C++ implementation files, handling the core logic, UI rendering, and data management.  
+
+* include/: Contains the header files defining the architecture of the system's classes (e.g., Accounts, Resources, Transactions, Notification).  
+
+* data/: Utilizes local text files (accounts.txt, resources.txt, transactions.txt, notifications.txt, and pending_resources.txt) to persistently store database records.  
+
+* CMakeLists.txt: The CMake build configuration file responsible for fetching dependencies and compiling the project.
+
+
+
+## Build Instructions
+
+The project uses CMake for building and will automatically fetch and link the required FTXUI core modules. So make sure you have a C++ compiler, CMake and Git installed in your computer.
+
+* Create a build directory and navigate into it:
+    mkdir build && cd build
+
+* Generate the build files:
+    cmake ..
+
+* Compile the executable:
+    cmake --build . 
+    if above command failed to build the project then run: cmake -G "MinGW Makefiles" ..
+
+* Run the application:
+    ./LibrarySystem
+
+
+
+## Contributors
+
+Designed and developed by a group of 2nd semester computer systems engineering students at NED University
+* Muhammad Ebad Adam
+* Uzair Mehmood
+* Muhammad Ahmed Shaikh
+* Muhammad Sarim Sarwar
