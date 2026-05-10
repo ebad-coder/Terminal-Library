@@ -21,6 +21,7 @@ LibrarySystem::LibrarySystem()
 
 /*****************************************************************************************************************/
 
+
 // runs the member version of the program
 // first shows authentication menu (login/register) and asks user how to authenticate themselves
 // then shows the member dashboard through which the member can select the operation they want to perform
@@ -97,7 +98,9 @@ void LibrarySystem::run_member_mode()
     }
 }
 
+
 /*****************************************************************************************************************/
+
 
 // runs the admin version of the program
 // first shows authentication menu through which admin can login to their account
@@ -170,11 +173,12 @@ void LibrarySystem::handle_user_registration()
         bool submit = UserInterface::show_registration_form(fullname, username, password, address, deposit_str, error_message);
 
         // If user clicked cancel, then abort the registration process
-        if (!submit)
+        if (!submit) return;
+
+        if (fullname.length() < 4 || fullname.find(' ') == std::string::npos)
         {
-            UserInterface::add_text_to_buffer("Registration cancelled by user.\n");
-            UserInterface::show_buffered_message();
-            return;
+            error_message = "Error: Please enter your full name.";
+            continue;
         }
         
         // validate username entered by the user
@@ -207,7 +211,7 @@ void LibrarySystem::handle_user_registration()
         }
 
         // check address is detailed enough
-        if (address.length() < 12)
+        if (address.length() < 12 || address.find(' ') == std::string::npos)
         {
             error_message = "Error: The address entered is too short. Please enter a detailed one.";
             continue;
@@ -219,13 +223,14 @@ void LibrarySystem::handle_user_registration()
         {
             deposit = std::stoi(deposit_str);
             if (deposit < 500 || deposit > 5000) {
-                error_message = "Error: Initial deposit must be between Rs.500 and Rs.5000.";
+                error_message = "Error: Account balance must be between Rs.500 and Rs.5000.";
                 continue;
             }
         }
         catch (...)
         {
-            error_message = "Error: Please enter a valid number for the deposit."; continue;
+            error_message = "Error: Please enter a valid number for the deposit.";
+            continue;
         }
 
         // if all validation passed, then register the new member
@@ -314,7 +319,9 @@ void LibrarySystem::handle_view_available_resources()
     }
 }
 
+
 /*****************************************************************************************************************/
+
 
 // first asks user the search criteria (title/category/creator) and input the search term through UserInterface
 // then calls resource manager to search and find all the resources that matched
@@ -394,11 +401,7 @@ void LibrarySystem::handle_borrowing_resource(Member *member)
     bool wish = UserInterface::get_confirmation("Are you sure you want to borrow this resource?");
 
     // user cancelled the borrowing
-    if (!wish) {
-        UserInterface::add_text_to_buffer("Borrowing failed: You cancelled the operation.\n");
-        UserInterface::show_buffered_message();
-        return;
-    }
+    if (!wish) return;
 
     BorrowingEligibility eligibility = Validator::is_eligible_for_borrowing(member, resource_to_borrow);
 
@@ -454,11 +457,13 @@ void LibrarySystem::handle_borrowing_resource(Member *member)
 
     Transaction* transaction = resource_manager.perform_borrowing(member, resource_to_borrow, true);
 
-    UserInterface::add_text_to_buffer("Borrowing successful.\n");
+    UserInterface::add_text_to_buffer("Borrowing Successful.\n");
     UserInterface::add_text_to_buffer(transaction->get_transaction_details());
     UserInterface::add_text_to_buffer("\nPlease return the resource within the due date. A fine of Rs." + std::to_string(resource_to_borrow->get_fine()) + " applies daily after the due date.\n");
+
     UserInterface::show_buffered_message();
 }
+
 
 /*****************************************************************************************************************/
 
@@ -516,12 +521,7 @@ void LibrarySystem::handle_return_resource(Member* member)
 
         bool return_wish = UserInterface::get_confirmation("Are you sure you want to return this resource?");
 
-        if (!return_wish)
-        {
-            UserInterface::add_text_to_buffer("Resource Returning Failed. Operation cancelled by the user.\n");
-            UserInterface::show_buffered_message();
-            continue;
-        }
+        if (!return_wish) continue;
     
         int fine = resource_manager.help_returning_resource(member, resource_to_return);
     
@@ -560,19 +560,17 @@ void LibrarySystem::handle_reserving_resource(Member *member)
     UserInterface::add_text_to_buffer(resource_to_reserve->get_resource_details());
     bool wish = UserInterface::get_confirmation("Are you sure you want to reserve this resource?");
 
-    if (!wish) {
-        UserInterface::add_text_to_buffer("Reservation failed: You cancelled the operation.\n");
-        UserInterface::show_buffered_message();
-        return;
-    }
+    if (!wish) return;
 
     ReservationResult result = resource_manager.attempt_reservation(member, resource_to_reserve);
 
-    if (result == ReservationResult::NotEligible) {
+    if (result == ReservationResult::NotEligible)
+    {
         UserInterface::add_text_to_buffer("You already have this resource borrowed or reserved.\n");
         UserInterface::show_buffered_message();
     }
-    else if (result == ReservationResult::AlreadyAvailable) {
+    else if (result == ReservationResult::AlreadyAvailable)
+    {
         UserInterface::add_text_to_buffer("The resource you want to reserve is actually available right now.\n");
         bool borrow_choice = UserInterface::get_confirmation("Do you wish to borrow it immediately?");
 
@@ -591,7 +589,8 @@ void LibrarySystem::handle_reserving_resource(Member *member)
             UserInterface::show_buffered_message();
         }
     }
-    else {
+    else
+    {
         UserInterface::add_text_to_buffer("You have successfully been added to the reservation queue.\n");
         UserInterface::show_buffered_message();
     }
@@ -647,12 +646,18 @@ void LibrarySystem::handle_view_inbox()
         {
             UserInterface::add_text_to_buffer(resource->get_resource_details());
         }
+        else
+        {
+            UserInterface::add_text_to_buffer("\nThere was an error displaying the associated resource.\nThe resource may have been removed.");
+        }
 
         UserInterface::show_buffered_message(); // Show the accumulated message modal
     }
 }
 
+
 /*****************************************************************************************************************/
+
 
 // displays the borrowing history of a member
 // first calls UserInterface to show all the transaction in a list, and asks user which one to view
@@ -699,6 +704,10 @@ void LibrarySystem::handle_view_borrowing_history(Member *member)
         {
             UserInterface::add_text_to_buffer(resource->get_resource_details());
         }
+        else
+        {
+            UserInterface::add_text_to_buffer("\nThere was an error displaying the associated resource.\nIt may have been removed.");
+        }
 
         UserInterface::show_buffered_message(); // Show the accumulated message modal
     }
@@ -721,7 +730,7 @@ void LibrarySystem::handle_view_balance(Member *member)
     // member has reached the maximum deposit limit (Rs.5000)
     if (balance >= MAX_SECURITY_DEPOSIT)
     {
-        UserInterface::add_text_to_buffer("\nYou have reached the maximum deposit limit.\n");
+        UserInterface::add_text_to_buffer("\nYou have reached the maximum balance limit.\n");
         UserInterface::show_buffered_message();
         return;
     }
@@ -747,8 +756,6 @@ void LibrarySystem::handle_view_balance(Member *member)
         // user cancelled
         if (!submit)
         {
-            UserInterface::add_text_to_buffer("Deposit operation cancelled.\n");
-            UserInterface::show_buffered_message();
             return;
         }
 
@@ -775,6 +782,7 @@ void LibrarySystem::handle_view_balance(Member *member)
 
     UserInterface::add_text_to_buffer("Rs." + std::to_string(deposit_amount) + " has been successfully deposited to your account.\n");
     UserInterface::add_text_to_buffer("Your new balance is: Rs." + std::to_string(member->get_balance()) + "\n");
+
     UserInterface::show_buffered_message();
 }
 
@@ -928,15 +936,20 @@ void LibrarySystem::handle_update_resource()
 
     std::vector<std::string> extra_vals;
 
-    if (choice == 1) {
-        Article* a = static_cast<Article*>(resource_to_update);
-        extra_vals = {a->get_journal_name(), a->get_author(), a->get_issue_number()};
-    } else if (choice == 2) {
-        Book* b = static_cast<Book*>(resource_to_update);
-        extra_vals = {b->get_isbn(), b->get_author(), b->get_publisher(), b->get_edition(), b->get_language()};
-    } else if (choice == 3) {
-        Journal* j = static_cast<Journal*>(resource_to_update);
-        extra_vals = {j->get_issn(), j->get_editor(), j->get_publisher(), std::to_string(j->get_volume_number())};
+    if (choice == 1)
+    {
+        Article* article = static_cast<Article*>(resource_to_update);
+        extra_vals = {article->get_journal_name(), article->get_author(), article->get_issue_number()};
+    }
+    else if (choice == 2)
+    {
+        Book* book = static_cast<Book*>(resource_to_update);
+        extra_vals = {book->get_isbn(), book->get_author(), book->get_publisher(), book->get_edition(), book->get_language()};
+    }
+    else if (choice == 3)
+    {
+        Journal* journal = static_cast<Journal*>(resource_to_update);
+        extra_vals = {journal->get_issn(), journal->get_editor(), journal->get_publisher(), std::to_string(journal->get_volume_number())};
     }
 
     std::string error_message = "";
@@ -990,13 +1003,16 @@ void LibrarySystem::handle_update_resource()
         }
 
         // Execute the update
-        if (choice == 1) {
+        if (choice == 1)
+        {
             static_cast<Article*>(resource_to_update)->update_resource(title, category, pub_date, fine_val, extra_vals[0], extra_vals[1], extra_vals[2]);
         }
-        else if (choice == 2) {
+        else if (choice == 2)
+        {
             static_cast<Book*>(resource_to_update)->update_resource(title, category, pub_date, fine_val, extra_vals[0], extra_vals[1], extra_vals[2], extra_vals[3], extra_vals[4]);
         }
-        else if (choice == 3) {
+        else if (choice == 3)
+        {
             int vol = 0;
             try {
                 vol = std::stoi(extra_vals[3]);
@@ -1028,7 +1044,8 @@ void LibrarySystem::handle_remove_resource()
     Resource* resource_to_remove = handle_searching_resource();
     if (resource_to_remove == nullptr) return;
 
-    if (!resource_to_remove->is_available()) {
+    if (!resource_to_remove->is_available()) 
+    {
         UserInterface::add_text_to_buffer("Unable to remove this resource as it is currently borrowed.\n");
         UserInterface::show_buffered_message();
         return;
@@ -1036,15 +1053,10 @@ void LibrarySystem::handle_remove_resource()
 
     // Buffer details for the modal
     UserInterface::add_text_to_buffer(resource_to_remove->get_resource_details());
-    bool wish = UserInterface::get_confirmation("Are you sure you want to PERMANENTLY remove this resource?");
+    bool wish = UserInterface::get_confirmation("Are you sure you want to permanently remove this resource?");
 
-    if (!wish) {
-        UserInterface::add_text_to_buffer("Operation cancelled.\n");
-        UserInterface::show_buffered_message();
-        return;
-    }
+    if (!wish) return;
 
-    account_manager.clear_resource_records(resource_to_remove->get_resource_id());
     resource_manager.remove_resource(resource_to_remove->get_resource_id());
 
     UserInterface::add_text_to_buffer("The resource has been removed from our collection successfully.\n");
@@ -1065,7 +1077,7 @@ void LibrarySystem::handle_view_all_members()
 
     if (members.empty())
     {
-        UserInterface::add_text_to_buffer("It looks like there are no members in our library.\n");
+        UserInterface::add_text_to_buffer("It looks like there are no members in our library...\n");
         UserInterface::show_buffered_message();
         return;
     }
@@ -1117,31 +1129,34 @@ void LibrarySystem::handle_send_notification()
         bool submit = UserInterface::show_notification_form(choice, title, message, resource_id, target_username, error_message);
 
         // If admin cancels the form
-        if (!submit) {
-            UserInterface::add_text_to_buffer("Notification operation cancelled.\n");
-            UserInterface::show_buffered_message();
+        if (!submit)
+        {
             return;
         }
 
-        if (title.empty() || message.empty()) {
-            error_message = "Error: Title and Message cannot be empty.";
+        if (title.empty() || message.empty())
+        {
+            error_message = "Error: Title and Body cannot be empty.";
             continue;
         }
 
-        if (resource_manager.get_resource_with_id(resource_id) == nullptr)
+        if (!resource_id.empty() && resource_manager.get_resource_with_id(resource_id) == nullptr)
         {
             error_message = "Error: No resource found with ID " + resource_id;
+            continue;
         }
 
         if (choice == 1) // Direct Message
         {
-            if (target_username.empty()) {
+            if (target_username.empty())
+            {
                 error_message = "Error: Please enter a target username.";
                 continue;
             }
 
-            // Verify the user exists
-            Member* target_member = dynamic_cast<Member*>(account_manager.get_account_with_username(target_username));
+            // Verify if user exists
+            Account* target_member = account_manager.get_account_with_username(target_username);
+
             if (target_member == nullptr) {
                 error_message = "Error: No member found with username '" + target_username + "'.";
                 continue;
@@ -1203,8 +1218,9 @@ void LibrarySystem::handle_view_donation_request()
     
         if (!resource_to_donate)
         {
-            UserInterface::add_text_to_buffer("There was an error when displaying the resource.\n");
+            UserInterface::add_text_to_buffer("There was an error when displaying the resource.\nIt may have been removed.");
             UserInterface::show_buffered_message();
+            current_user->remove_notification(target_index);
             continue;
         }
 
@@ -1434,6 +1450,7 @@ std::unique_ptr<Resource> LibrarySystem::resource_input(int choice)
 
 /*****************************************************************************************************************/
 
+
 // helper function to edit a member profile details
 // calls UserInterface to show the profile edit form where member can enter new details
 // then resource manager is called to update every resource reservation queue with the new username
@@ -1456,9 +1473,9 @@ void LibrarySystem::help_edit_profile(Member* member)
 
         if (!submit) return; // User cancelled edit
 
-        if (full_name.length() < 4)
+        if (full_name.length() < 4 || full_name.find(' ') == std::string::npos)
         {
-            error_message = "Please enter your full name.";
+            error_message = "Error: Please enter your full name.";
             continue;
         }
 
@@ -1466,11 +1483,11 @@ void LibrarySystem::help_edit_profile(Member* member)
         if (username != old_username)
         {
             if (!account_manager.is_unique_username(username)) {
-                error_message = "This username is already taken.";
+                error_message = "Error: This username is already taken.";
                 continue;
             }
             if (Validator::check_username(username) != UsernameStatus::Valid) {
-                error_message = "The username entered is too short or contains invalid characters.";
+                error_message = "Error: The username entered is too short or contains invalid characters.";
                 continue;
             }
         }
@@ -1479,14 +1496,14 @@ void LibrarySystem::help_edit_profile(Member* member)
         if (password != old_password)
         {
             if (Validator::check_password_strength(password) != PasswordStrength::Strong) {
-                error_message = "Password must be at least 8 chars long with 1 uppercase, 1 lowercase and 1 digit.";
+                error_message = "Error: Password must be at least 8 characters long with 1 uppercase, 1 lowercase and 1 digit.";
                 continue;
             }
         }
 
         // validating address
-        if (address.length() < 12) {
-            error_message = "The address entered is too short. Please enter a detailed one.";
+        if (address.length() < 12 || address.find(' ') == std::string::npos) {
+            error_message = "Error: The address entered is too short. Please enter a detailed one.";
             continue;
         }
 
@@ -1497,6 +1514,7 @@ void LibrarySystem::help_edit_profile(Member* member)
         }
 
         member->update_profile(full_name, username, password, address);
+
         UserInterface::add_text_to_buffer("Your profile has been updated successfully.\n");
         UserInterface::show_buffered_message();
         break;
@@ -1514,23 +1532,19 @@ void LibrarySystem::help_edit_profile(Member* member)
 void LibrarySystem::help_close_account(Member* member)
 {
     if (member->get_balance() < 0) {
-        UserInterface::add_text_to_buffer("Unable to close account. You have an outstanding balance.\n");
+        UserInterface::add_text_to_buffer("Unable to close your account. You have an outstanding balance.\n");
         UserInterface::show_buffered_message();
         return;
     }
     if (member->get_borrowed_resources_count() > 0) {
-        UserInterface::add_text_to_buffer("Unable to close account. Please return borrowed resources first.\n");
+        UserInterface::add_text_to_buffer("Unable to close your account. Please return your borrowed resources first.\n");
         UserInterface::show_buffered_message();
         return;
     }
 
     bool wish = UserInterface::get_confirmation("Are you sure you want to close your account?");
 
-    if (!wish) {
-        UserInterface::add_text_to_buffer("Account closing operation cancelled.\n");
-        UserInterface::show_buffered_message();
-        return;
-    }
+    if (!wish) return;
 
     resource_manager.remove_member_from_reservation_queues(member->get_username());
     account_manager.close_account(member);

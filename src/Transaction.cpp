@@ -32,6 +32,11 @@ std::string Transaction::get_transaction_details() const
     details += "Issue Date  : " + issue_date + '\n';
     details += "Due Date    : " + due_date + '\n';
 
+    if (!active)
+    {
+        details += "Returned On : " + returned_date + '\n';
+    }
+
     return details;
 }
 

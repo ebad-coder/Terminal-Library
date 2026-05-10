@@ -51,6 +51,7 @@ int UserInterface::show_main_menu()
             separatorEmpty(),
             menu->Render() | center,
             separatorEmpty(),
+            text("Use arrows to navigate | Press ENTER to select") | dim | color(Color::White) | center
         }) 
         | borderRounded
         | color(Color::BlueLight)
@@ -122,6 +123,7 @@ int UserInterface::show_member_dashboard(Account* current_user)
         layout.push_back(separatorEmpty());
         layout.push_back(menu->Render() | center);
         layout.push_back(separatorEmpty());
+        layout.push_back(text("Use arrows to navigate | Press ENTER to select") | dim | color(Color::White) | center);
 
         return vbox(layout) | borderRounded | color(Color::BlueLight) | size(WIDTH, GREATER_THAN, 60)| center;
     });
@@ -186,12 +188,9 @@ int UserInterface::show_admin_dashboard(Account* current_user)
         layout.push_back(separatorEmpty());
         layout.push_back(menu->Render() | center);
         layout.push_back(separatorEmpty());
+        layout.push_back(text("Use arrows to navigate | Press ENTER to select") | dim | color(Color::White) | center);
 
-        return vbox(layout) 
-            | borderRounded 
-            | color(Color::Magenta)
-            | size(WIDTH, GREATER_THAN, 60)
-            | center;
+        return vbox(layout) | borderRounded | color(Color::Magenta)| size(WIDTH, GREATER_THAN, 60)| center;
     });
 
     screen.Loop(renderer);
@@ -237,6 +236,7 @@ int UserInterface::show_member_authentication_menu()
             separatorEmpty(),
             menu->Render() | center,
             separatorEmpty(),
+            text("Use arrows to navigate | Press ENTER to select") | dim | color(Color::White) | center
         }) 
         | borderRounded 
         | color(Color::BlueLight)
@@ -286,6 +286,7 @@ int UserInterface::show_admin_authentication_menu()
             separatorEmpty(),
             menu->Render() | center,
             separatorEmpty(),
+            text("Use arrows to navigate | Press ENTER to select") | dim | color(Color::White) | center
         }) 
         | borderRounded 
         | color(Color::Magenta)
@@ -663,11 +664,11 @@ int UserInterface::show_selection_list(const std::string& title, const std::vect
             menu->Render() | vscroll_indicator | frame | size(HEIGHT, LESS_THAN, 15),
             
             separatorEmpty(),
-            text("Use arrows to navigate. Press ENTER to select.") | dim | center,
+            text("Use arrows to navigate | Press ENTER to select") | dim | color(Color::White) | center,
             separatorEmpty(),
             btn_cancel->Render() | center,
             separatorEmpty()
-        }) 
+        })        
         | borderRounded 
         | color(Color::BlueLight) 
         | size(WIDTH, GREATER_THAN, 60) 
@@ -981,19 +982,23 @@ bool UserInterface::show_notification_form(int choice, std::string& title, std::
     bool cancelled = false;
 
     // Create the Input Components
+    Component input_user  = Input(&target_username, "Member's username...");
     Component input_title = Input(&title, "Title...");
     Component input_msg   = Input(&message, "Message...");
-    Component input_res   = Input(&resource_id, "Resource ID (or -1 to skip)...");
-    Component input_user  = Input(&target_username, "Member's username...");
+    Component input_res   = Input(&resource_id, "Resource ID (optional)...");
 
     auto submit_btn = Button("  Send Notification  ", [&] { submitted = true; screen.ExitLoopClosure()(); }, ButtonOption::Animated());
     auto cancel_btn = Button("  Cancel  ", [&] { cancelled = true; screen.ExitLoopClosure()(); }, ButtonOption::Animated());
 
     // Build the navigation container dynamically
-    Components all_components = {input_title, input_msg, input_res};
+    Components all_components;
     if (choice == 1) {
         all_components.push_back(input_user); // Only add if sending a Direct Message
     }
+    all_components.push_back(input_title);
+    all_components.push_back(input_msg);
+    all_components.push_back(input_res);
+
     all_components.push_back(Container::Horizontal({submit_btn, cancel_btn}));
     
     auto container = Container::Vertical(all_components);
@@ -1006,14 +1011,14 @@ bool UserInterface::show_notification_form(int choice, std::string& title, std::
         layout.push_back(separatorLight() | color(Color::GrayDark));
         layout.push_back(separatorEmpty());
 
-        layout.push_back(hbox(text(" Title       : ") | color(Color::White), input_title->Render() | flex) | borderRounded);
-        layout.push_back(hbox(text(" Message     : ") | color(Color::White), input_msg->Render() | flex) | borderRounded);
-        layout.push_back(hbox(text(" Resource ID : ") | color(Color::White), input_res->Render() | flex) | borderRounded);
-
         // Render the extra username input box if choice is 1
         if (choice == 1) {
             layout.push_back(hbox(text(" Username    : ") | color(Color::White), input_user->Render() | flex) | borderRounded);
         }
+        
+        layout.push_back(hbox(text(" Title       : ") | color(Color::White), input_title->Render() | flex) | borderRounded);
+        layout.push_back(hbox(text(" Message     : ") | color(Color::White), input_msg->Render() | flex) | borderRounded);
+        layout.push_back(hbox(text(" Resource ID : ") | color(Color::White), input_res->Render() | flex) | borderRounded);
 
         layout.push_back(separatorEmpty());
 

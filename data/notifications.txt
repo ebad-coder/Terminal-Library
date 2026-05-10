@@ -1,3 +1,34 @@
+System|imran123|Borrowing Sucessful|You have borrowed a resource. Please return the resource within the due date.[NL]After the due date, a fine of Rs. 50 will be applied each day until the resource is not returned.|05/05/2026|1|B6821
+System|imran123|Membership Upgraded|Your account has been upgraded to premium membership.[NL]You can now enjoy all the benefits of Premium account.|05/05/2026|1|
+System|imran123|Borrowing Sucessful|You have borrowed a resource. Please return the resource within the due date.[NL]After the due date, a fine of Rs. 65 will be applied each day until the resource is not returned.|05/05/2026|0|B1953
+System|imran123|Borrowing Sucessful|You have borrowed a resource. Please return the resource within the due date.[NL]After the due date, a fine of Rs. 60 will be applied each day until the resource is not returned.|05/05/2026|0|A8631
+ooplegend|imran123|Public Holiday|Dear Respected Members,[NL]Library will remain off on 3rd May 2026.[NL]Sorry for inconvenience. Our management system will go on maintanence.[NL]Thankyou for your attention|05/05/2026|1|-1
+System|imran123|Borrowing Sucessful|You have borrowed a resource. Please return the resource within the due date.[NL]After the due date, a fine of Rs. 55 will be applied each day until the resource is not returned.|05/05/2026|0|A4310
+System|imran123|Returned Sucessful|Thankyou for returning the resource. Keep exploring more.|05/05/2026|0|A4310
+System|imran123|Returned Sucessful|Thankyou for returning the resource. [NL]You returned 85 day(s) late. A fine of Rs. 4250 has been applied to your account.[NL]Keep exploring more.|05/05/2026|1|B6821
+System|imran123|Returned Sucessful|Thankyou for returning the resource. [NL]You returned 54 day(s) late. A fine of Rs. 3510 has been applied to your account.[NL]Keep exploring more.|05/05/2026|0|B1953
+System|imran123|Returned Sucessful|Thankyou for returning the resource. [NL]You returned 11 day(s) late. A fine of Rs. 660 has been applied to your account.[NL]Keep exploring more.|05/05/2026|0|A8631
+System|imran123|Borrowing Sucessful|You have borrowed a resource. Please return the resource within the due date.[NL]After the due date, a fine of Rs. 60 will be applied each day until the resource is not returned.|05/05/2026|0|B9538
+System|imran123|Borrowing Sucessful|You have borrowed a resource. Please return the resource within the due date.[NL]After the due date, a fine of Rs. 55 will be applied each day until the resource is not returned.|05/05/2026|0|B9641
+ooplegend|imran123|Resource Overdue|Please return all your overdue resources.[NL]thankyou.|05/05/2026|0|-1
+ooplegend|imran123|Resource Overdue|Dear Respected Member,[NL]Please return your overdue resource.[NL]Thankyou.|10/05/2026|1|B7931
+ooplegend|imran123|Resource Overdue|Dear Respected Member,[NL]Please return your overdue resource.[NL]Thankyou!|10/05/2026|1|B9538
+System|ebad1234|Borrowing Sucessful|You have borrowed a resource. Please return the resource within the due date.[NL]After the due date, a fine of Rs. 65 will be applied each day until the resource is not returned.|05/05/2026|1|B9374
+System|ebad1234|Borrowing Sucessful|You have borrowed a resource. Please return the resource within the due date.[NL]After the due date, a fine of Rs. 50 will be applied each day until the resource is not returned.|05/05/2026|1|B6048
+ooplegend|ebad1234|Public Holiday|Dear Respected Members,[NL]Library will remain off on 3rd May 2026.[NL]Sorry for inconvenience. Our management system will go on maintanence.[NL]Thankyou for your attention|05/05/2026|1|-1
+System|ebad1234|Returned Sucessful|Thankyou for returning the resource. Keep exploring more.|05/05/2026|1|B6048
+System|ebad1234|Borrowing Sucessful|You have borrowed a resource. Please return the resource within the due date.[NL]After the due date, a fine of Rs. 50 will be applied each day until the resource is not returned.|05/05/2026|1|B7580
+System|ebad1234|Returned Sucessful|Thankyou for returning the resource. [NL]You returned 25 day(s) late. A fine of Rs. 1625 has been applied to your account.[NL]Keep exploring more.|05/05/2026|1|B9374
+System|ebad1234|Reservation Sucessful|You have reserved a resource, it will be automatically added to your borrowed resources as soon as it becomes available.|05/05/2026|1|B5316
+System|ebad1234|Membership Upgraded|Your account has been upgraded to premium membership.[NL]You can now enjoy all the benefits of Premium account.|05/05/2026|1|
+System|ebad1234|Donation Request Rejected|Unfortunately, the resource you donated has not been accepted this time.[NL]Thank you for your interest in supporting our library.|07/05/2026|1|A3651
+System|ebad1234|Returned Sucessful|Thankyou for returning the resource. Keep exploring more.|07/05/2026|1|B7580
+System|ebad1234|Borrowing Sucessful|You have borrowed a resource. Please return the resource within the due date.[NL]After the due date, a fine of Rs. 50 will be applied each day until the resource is not returned.|07/05/2026|1|B2793
+System|ebad1234|Returned Sucessful|Thankyou for returning the resource. Keep exploring more.|07/05/2026|1|B2793
+System|ebad1234|Borrowing Sucessful|You have borrowed a resource. Please return the resource within the due date.[NL]After the due date, a fine of Rs. 50 will be applied each day until the resource is not returned.|10/05/2026|1|B3720
+System|ebad1234|Returned Sucessful|Thankyou for returning the resource. Keep exploring more.|10/05/2026|1|B3720
+System|ebad1234|Reservation Completed|The resource you reserved is now added to your borrowed resources.|10/05/2026|1|B5316
+System|ebad1234|Returned Sucessful|Thankyou for returning the resource. Keep exploring more.|10/05/2026|1|B5316
 ooplegend|member123|Public Holiday|Dear Respected Members,[NL]Library will remain off on 3rd May 2026.[NL]Sorry for inconvenience. Our management system will go on maintanence.[NL]Thankyou for your attention|05/05/2026|1|-1
 System|member123|Borrowing Sucessful|You have borrowed a resource. Please return the resource within the due date.[NL]After the due date, a fine of Rs. 50 will be applied each day until the resource is not returned.|05/05/2026|1|B7296
 System|member123|Membership Upgraded|Your account has been upgraded to premium membership.[NL]You can now enjoy all the benefits of Premium account.|05/05/2026|1|
@@ -10,29 +41,5 @@ System|member123|Returned Sucessful|Thankyou for returning the resource. [NL]You
 System|member123|Returned Sucessful|Thankyou for returning the resource. [NL]You returned 104 day(s) late. A fine of Rs. 5200 has been applied to your account.[NL]Keep exploring more.|05/05/2026|1|A7814
 System|member123|Borrowing Sucessful|You have borrowed a resource. Please return the resource within the due date.[NL]After the due date, a fine of Rs. 50 will be applied each day until the resource is not returned.|05/05/2026|0|B7931
 System|member123|Borrowing Sucessful|You have borrowed a resource. Please return the resource within the due date.[NL]After the due date, a fine of Rs. 60 will be applied each day until the resource is not returned.|05/05/2026|0|B5316
-System|ebad1234|Borrowing Sucessful|You have borrowed a resource. Please return the resource within the due date.[NL]After the due date, a fine of Rs. 65 will be applied each day until the resource is not returned.|05/05/2026|1|B9374
-System|ebad1234|Borrowing Sucessful|You have borrowed a resource. Please return the resource within the due date.[NL]After the due date, a fine of Rs. 50 will be applied each day until the resource is not returned.|05/05/2026|1|B6048
-ooplegend|ebad1234|Public Holiday|Dear Respected Members,[NL]Library will remain off on 3rd May 2026.[NL]Sorry for inconvenience. Our management system will go on maintanence.[NL]Thankyou for your attention|05/05/2026|1|-1
-System|ebad1234|Returned Sucessful|Thankyou for returning the resource. Keep exploring more.|05/05/2026|1|B6048
-System|ebad1234|Borrowing Sucessful|You have borrowed a resource. Please return the resource within the due date.[NL]After the due date, a fine of Rs. 50 will be applied each day until the resource is not returned.|05/05/2026|1|B7580
-System|ebad1234|Returned Sucessful|Thankyou for returning the resource. [NL]You returned 25 day(s) late. A fine of Rs. 1625 has been applied to your account.[NL]Keep exploring more.|05/05/2026|1|B9374
-System|ebad1234|Reservation Sucessful|You have reserved a resource, it will be automatically added to your borrowed resources as soon as it becomes available.|05/05/2026|1|B5316
-System|ebad1234|Membership Upgraded|Your account has been upgraded to premium membership.[NL]You can now enjoy all the benefits of Premium account.|05/05/2026|1|
-System|ebad1234|Donation Sucessful|Your resource donation request has been accepted. Thank you for your generous contribution.[NL]It means a lot to our library and the community we serve.|05/05/2026|1|A8914
-System|ebad1234|Donation Request Rejected|Unfortunately, the resource you donated has not been accepted this time.[NL]Thank you for your interest in supporting our library.|07/05/2026|1|A3651
-System|ebad1234|Returned Sucessful|Thankyou for returning the resource. Keep exploring more.|07/05/2026|1|B7580
-System|ebad1234|Borrowing Sucessful|You have borrowed a resource. Please return the resource within the due date.[NL]After the due date, a fine of Rs. 50 will be applied each day until the resource is not returned.|07/05/2026|1|B2793
-System|ebad1234|Returned Sucessful|Thankyou for returning the resource. Keep exploring more.|07/05/2026|0|B2793
-System|imran123|Borrowing Sucessful|You have borrowed a resource. Please return the resource within the due date.[NL]After the due date, a fine of Rs. 50 will be applied each day until the resource is not returned.|05/05/2026|1|B6821
-System|imran123|Membership Upgraded|Your account has been upgraded to premium membership.[NL]You can now enjoy all the benefits of Premium account.|05/05/2026|1|
-System|imran123|Borrowing Sucessful|You have borrowed a resource. Please return the resource within the due date.[NL]After the due date, a fine of Rs. 65 will be applied each day until the resource is not returned.|05/05/2026|0|B1953
-System|imran123|Borrowing Sucessful|You have borrowed a resource. Please return the resource within the due date.[NL]After the due date, a fine of Rs. 60 will be applied each day until the resource is not returned.|05/05/2026|0|A8631
-ooplegend|imran123|Public Holiday|Dear Respected Members,[NL]Library will remain off on 3rd May 2026.[NL]Sorry for inconvenience. Our management system will go on maintanence.[NL]Thankyou for your attention|05/05/2026|1|-1
-System|imran123|Borrowing Sucessful|You have borrowed a resource. Please return the resource within the due date.[NL]After the due date, a fine of Rs. 55 will be applied each day until the resource is not returned.|05/05/2026|0|A4310
-System|imran123|Returned Sucessful|Thankyou for returning the resource. Keep exploring more.|05/05/2026|0|A4310
-System|imran123|Returned Sucessful|Thankyou for returning the resource. [NL]You returned 85 day(s) late. A fine of Rs. 4250 has been applied to your account.[NL]Keep exploring more.|05/05/2026|0|B6821
-System|imran123|Returned Sucessful|Thankyou for returning the resource. [NL]You returned 54 day(s) late. A fine of Rs. 3510 has been applied to your account.[NL]Keep exploring more.|05/05/2026|0|B1953
-System|imran123|Returned Sucessful|Thankyou for returning the resource. [NL]You returned 11 day(s) late. A fine of Rs. 660 has been applied to your account.[NL]Keep exploring more.|05/05/2026|0|A8631
-System|imran123|Borrowing Sucessful|You have borrowed a resource. Please return the resource within the due date.[NL]After the due date, a fine of Rs. 60 will be applied each day until the resource is not returned.|05/05/2026|0|B9538
-System|imran123|Borrowing Sucessful|You have borrowed a resource. Please return the resource within the due date.[NL]After the due date, a fine of Rs. 55 will be applied each day until the resource is not returned.|05/05/2026|0|B9641
-ooplegend|imran123|Resource Overdue|Please return all your overdue resources.[NL]thankyou.|05/05/2026|0|-1
+System|member123|Returned Sucessful|Thankyou for returning the resource. Keep exploring more.|10/05/2026|0|B5316
+System|member123|Returned Sucessful|Thankyou for returning the resource. [NL]You returned 11 day(s) late. A fine of Rs. 550 has been applied to your account.[NL]Keep exploring more.|10/05/2026|1|B7931

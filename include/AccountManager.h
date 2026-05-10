@@ -26,7 +26,6 @@ class AccountManager {
         Member* get_next_borrower(Resource* resource);
         int broadcast_notification_to_members(const std::string& s, const std::string& t, const std::string& b, const std::string& d, const std::string& r_id);
         bool send_donation_request(Member* member, Resource *resource);
-        void clear_resource_records(const std::string& resource_id);
         std::vector<Member*> get_all_members();
         bool is_unique_username(const std::string& username);
         void close_account(Member* member);

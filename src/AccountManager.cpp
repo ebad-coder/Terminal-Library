@@ -168,41 +168,6 @@ bool AccountManager::send_donation_request(Member* member, Resource* resource)
 /*****************************************************************************************************************/
 
 
-// deletes all notifications and transactions related to a resource
-void AccountManager::clear_resource_records(const std::string& resource_id)
-{
-    for (const auto& account_entry : accounts_database)
-    {
-        Account* current_account = account_entry.second.get();
-
-        for (int i = current_account->get_inbox_size() - 1; i >= 0; --i)
-        {
-            Notification* current_notification = current_account->get_notification_at(i);
-
-            if (current_notification->get_resource_id() == resource_id)
-            {
-                current_account->remove_notification(i);
-            }
-        }
-
-        if (current_account->get_account_type() != AccountType::Member) continue;
-
-        Member* member = static_cast<Member*>(current_account);
-
-        for (int i = member->get_borrowing_history_size() - 1; i >= 0; --i)
-        {
-            if (member->get_transaction_at(i)->get_resource_id() == resource_id)
-            {
-                member->remove_transaction(i);
-            }
-        }
-    }
-}
-
-
-/*****************************************************************************************************************/
-
-
 // store all members in a vector and returns it
 std::vector<Member*> AccountManager::get_all_members()
 {
@@ -243,23 +208,18 @@ void AccountManager::close_account(Member* member)
 
         for (int i = current_account->get_inbox_size() - 1; i >= 0; --i)
         {
+            if (current_account == member) continue;
+
             Notification* current_notification = current_account->get_notification_at(i);
 
-            if (current_account != member && (current_notification->get_sender() == member->get_username() || current_notification->get_receiver() == member->get_username()))
+            if (current_notification->get_sender() == member->get_username())
             {
                 current_account->remove_notification(i);
             }
         }
     }
-
-    for (auto it = accounts_database.begin(); it != accounts_database.end(); ++it)
-    {
-        if (it->second.get() == member)
-        {
-            accounts_database.erase(it);
-            return;
-        }
-    }
+   
+    accounts_database.erase(accounts_database.find(member->get_username()));
 }
 
 
