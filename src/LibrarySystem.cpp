@@ -56,7 +56,7 @@ void LibrarySystem::run_member_mode()
                     if (found_resource) 
                     {
                         UserInterface::add_text_to_buffer(found_resource->get_resource_details());
-                        UserInterface::show_buffered_message();
+                        UserInterface::show_buffered_message("RESOURCE DETAILS");
                     }
                     break;
                 }
@@ -237,7 +237,7 @@ void LibrarySystem::handle_user_registration()
         current_user = account_manager.register_member(username, password, fullname, address, deposit);
         
         UserInterface::add_text_to_buffer("Account successfully created! You are now logged in.\n");
-        UserInterface::show_buffered_message();
+        UserInterface::show_buffered_message("REGISTRATION COMPLETE");
 
         break; // exit the form loop
     }
@@ -270,7 +270,7 @@ void LibrarySystem::handle_user_authentication(AccountType expected_type)
         if (current_user)
         {
             UserInterface::add_text_to_buffer("You are successfully logged in.\n");
-            UserInterface::show_buffered_message();
+            UserInterface::show_buffered_message("LOGIN SUCCESSFUL");
             break;
         }
         else
@@ -296,7 +296,7 @@ void LibrarySystem::handle_view_available_resources()
     if (available_resources.empty())
     {
         UserInterface::add_text_to_buffer("There are currently no available resources...\n");
-        UserInterface::show_buffered_message();
+        UserInterface::show_buffered_message("SORRY!");
         return;
     }
     
@@ -315,7 +315,7 @@ void LibrarySystem::handle_view_available_resources()
     
         // Show the details of the selected resource
         UserInterface::add_text_to_buffer(available_resources[choice-1]->get_resource_details());
-        UserInterface::show_buffered_message();
+        UserInterface::show_buffered_message("RESOURCE DETAILS");
     }
 }
 
@@ -346,8 +346,8 @@ Resource *LibrarySystem::handle_searching_resource()
     // no resource matched the search term
     if (matches.empty())
     {
-        UserInterface::add_text_to_buffer("Sorry, no resources matched your search.\n");
-        UserInterface::show_buffered_message();
+        UserInterface::add_text_to_buffer("No resources matched your search.\n");
+        UserInterface::show_buffered_message("SORRY!");
         return nullptr;
     }
 
@@ -405,63 +405,70 @@ void LibrarySystem::handle_borrowing_resource(Member *member)
 
     BorrowingEligibility eligibility = Validator::is_eligible_for_borrowing(member, resource_to_borrow);
 
-    if (eligibility == BorrowingEligibility::NotAvailable) {
+    if (eligibility == BorrowingEligibility::NotAvailable)
+    {
         UserInterface::add_text_to_buffer("Borrowing failed: The resource is not available at the moment.\n");
         UserInterface::add_text_to_buffer("You can reserve this resource. It will be added to your borrowed resources as soon as it becomes available.\n");
         
         bool reserve_choice = UserInterface::get_confirmation("Do you wish to reserve this resource instead?");
 
-        if (reserve_choice) {
+        if (reserve_choice)
+        {
             ReservationResult result = resource_manager.attempt_reservation(member, resource_to_borrow);
             if (result == ReservationResult::Success) {
                 UserInterface::add_text_to_buffer("You are successfully added to the reservation queue for this resource.\n");
+                UserInterface::show_buffered_message("RESERVATION SUCCESSFUL");
             }
             else {
-                UserInterface::add_text_to_buffer("Reservation failed. You may already have reserved this resource.\n");
+                UserInterface::add_text_to_buffer("You may already have reserved this resource.\n");
+                UserInterface::show_buffered_message("RESERVATION FAILED");
             }
-            UserInterface::show_buffered_message();
         }
         return;
     }
-    else if (eligibility == BorrowingEligibility::AlreadyBorrowed) {
-        UserInterface::add_text_to_buffer("Borrowing failed: You already have this resource borrowed.\n");
-        UserInterface::show_buffered_message();
+    else if (eligibility == BorrowingEligibility::AlreadyBorrowed)
+    {
+        UserInterface::add_text_to_buffer("You already have this resource borrowed.\n");
+        UserInterface::show_buffered_message("BORROWING FAILED");
         return;
     }
-    else if (eligibility == BorrowingEligibility::BorrowingLimit) {
-        UserInterface::add_text_to_buffer("Borrowing failed: You can not borrow more than " + std::to_string(member->get_max_borrow_count()) + " resources at once.\n");
+    else if (eligibility == BorrowingEligibility::BorrowingLimit)
+    {
+        UserInterface::add_text_to_buffer("You can not borrow more than " + std::to_string(member->get_max_borrow_count()) + " resources at once.\n");
         if (member->get_membership_type() == MemberShipType::Standard) {
             UserInterface::add_text_to_buffer("Consider upgrading your account to premium. A premium member can borrow upto " + std::to_string(PREMIUM_BORROWS) + " resources at once.\n");
         }
-        UserInterface::show_buffered_message();
+        UserInterface::show_buffered_message("BORROWING FAILED");
         return;
     }
-    else if (eligibility == BorrowingEligibility::InsufficientBalance) {
-        UserInterface::add_text_to_buffer("Borrowing failed: You must have a minimum of Rs." + std::to_string(SECURITY_DEPOSIT) + " in your account to borrow a resource.\n");
-        UserInterface::show_buffered_message();
+    else if (eligibility == BorrowingEligibility::InsufficientBalance)
+    {
+        UserInterface::add_text_to_buffer("You must have a minimum of Rs." + std::to_string(SECURITY_DEPOSIT) + " in your account to borrow a resource.\n");
+        UserInterface::show_buffered_message("BORROWING FAILED");
         return;
     }
-    else if (eligibility == BorrowingEligibility::TransactionLimit) {
-        UserInterface::add_text_to_buffer("Borrowing failed: You cannot perform more than " + std::to_string(member->get_max_transaction_count()) + " transactions in a day. Try again tomorrow.\n");
+    else if (eligibility == BorrowingEligibility::TransactionLimit)
+    {
+        UserInterface::add_text_to_buffer("You cannot perform more than " + std::to_string(member->get_max_transaction_count()) + " transactions in a day. Try again tomorrow.\n");
         if (member->get_membership_type() == MemberShipType::Standard) {
             UserInterface::add_text_to_buffer("Consider upgrading your account to premium. A premium member can perform upto " + std::to_string(PREMIUM_TRANSACTIONS) + " transactions in a day.\n");
         }
-        UserInterface::show_buffered_message();
+        UserInterface::show_buffered_message("BORROWING FAILED");
         return;
     }
-    else if (eligibility == BorrowingEligibility::ReturnedToday) {
-        UserInterface::add_text_to_buffer("Borrowing failed: You cannot borrow a resource you just returned today.\n");
-        UserInterface::show_buffered_message();
+    else if (eligibility == BorrowingEligibility::ReturnedToday)
+    {
+        UserInterface::add_text_to_buffer("You cannot borrow a resource you just returned. Please try again tomorrow.\n");
+        UserInterface::show_buffered_message("BORROWING FAILED");
         return;
     }
 
     Transaction* transaction = resource_manager.perform_borrowing(member, resource_to_borrow, true);
 
-    UserInterface::add_text_to_buffer("Borrowing Successful.\n");
     UserInterface::add_text_to_buffer(transaction->get_transaction_details());
     UserInterface::add_text_to_buffer("\nPlease return the resource within the due date. A fine of Rs." + std::to_string(resource_to_borrow->get_fine()) + " applies daily after the due date.\n");
 
-    UserInterface::show_buffered_message();
+    UserInterface::show_buffered_message("BORROWING SUCCESSFUL");
 }
 
 
@@ -497,7 +504,7 @@ void LibrarySystem::handle_return_resource(Member* member)
         if (num_borrowed_resources <= 0)
         {
             UserInterface::add_text_to_buffer("You have returned all your borrowed resources.\n");
-            UserInterface::show_buffered_message();
+            UserInterface::show_buffered_message("RETURN A RESOURCE");
             return;
         }
 
@@ -539,7 +546,7 @@ void LibrarySystem::handle_return_resource(Member* member)
             resource_manager.perform_borrowing(next_borrower, resource_to_return, false);
         }
 
-        UserInterface::show_buffered_message();
+        UserInterface::show_buffered_message("RESOURCE RETURNED");
     }
 }
 
@@ -567,7 +574,7 @@ void LibrarySystem::handle_reserving_resource(Member *member)
     if (result == ReservationResult::NotEligible)
     {
         UserInterface::add_text_to_buffer("You already have this resource borrowed or reserved.\n");
-        UserInterface::show_buffered_message();
+        UserInterface::show_buffered_message("RESERVATION FAILED");
     }
     else if (result == ReservationResult::AlreadyAvailable)
     {
@@ -580,19 +587,21 @@ void LibrarySystem::handle_reserving_resource(Member *member)
 
             if (eligibility == BorrowingEligibility::Eligible) {
                 Transaction* transaction = resource_manager.perform_borrowing(member, resource_to_reserve, true);
-                UserInterface::add_text_to_buffer("Borrowing successful.\n");
                 UserInterface::add_text_to_buffer(transaction->get_transaction_details());
+                UserInterface::add_text_to_buffer("\nPlease return the resource within the due date. A fine of Rs." + std::to_string(resource_to_reserve->get_fine()) + " applies daily after the due date.\n");
+                UserInterface::show_buffered_message("BORROWING SUCCESSFUL");
             }
             else {
                 UserInterface::add_text_to_buffer("Borrowing failed due to borrowing/transaction limits or insufficient balance.\n");
+                UserInterface::show_buffered_message("BORROWING FAILED");
             }
-            UserInterface::show_buffered_message();
         }
     }
     else
     {
-        UserInterface::add_text_to_buffer("You have successfully been added to the reservation queue.\n");
-        UserInterface::show_buffered_message();
+        UserInterface::add_text_to_buffer("You have been successfully added to the reservation queue.\n");
+        UserInterface::add_text_to_buffer("It will be automatically added to your borrowed resources as soon as it becomes available.\n");
+        UserInterface::show_buffered_message("RESERVATION PLACED");
     }
 }
 
@@ -611,7 +620,7 @@ void LibrarySystem::handle_view_inbox()
     if (size == 0)
     {
         UserInterface::add_text_to_buffer("It looks like your inbox is empty...\n");
-        UserInterface::show_buffered_message();
+        UserInterface::show_buffered_message("SORRY!");
         return;
     }
 
@@ -639,19 +648,22 @@ void LibrarySystem::handle_view_inbox()
         UserInterface::add_text_to_buffer(selected_notification->get_notification_details());
     
         // get the resource associated with the notification
-        Resource* resource = resource_manager.get_resource_with_id(selected_notification->get_resource_id());
-    
-        // Buffer the resource details as well.
-        if (resource)
+        if (!selected_notification->get_resource_id().empty())
         {
-            UserInterface::add_text_to_buffer(resource->get_resource_details());
-        }
-        else
-        {
-            UserInterface::add_text_to_buffer("\nThere was an error displaying the associated resource.\nThe resource may have been removed.");
+            Resource* resource = resource_manager.get_resource_with_id(selected_notification->get_resource_id());
+
+            // Buffer the resource details as well.
+            if (resource)
+            {
+                UserInterface::add_text_to_buffer(resource->get_resource_details());
+            }
+            else
+            {
+                UserInterface::add_text_to_buffer("\nThere was an error displaying the associated resource.\nThe resource may have been removed.");
+            }
         }
 
-        UserInterface::show_buffered_message(); // Show the accumulated message modal
+        UserInterface::show_buffered_message("NOTIFICATION DETAILS"); // Show the accumulated message modal
     }
 }
 
@@ -670,7 +682,7 @@ void LibrarySystem::handle_view_borrowing_history(Member *member)
     if (history_size == 0)
     {
         UserInterface::add_text_to_buffer("Looks like the borrowing history is empty...\n");
-        UserInterface::show_buffered_message();
+        UserInterface::show_buffered_message("SORRY!");
         return;
     }
 
@@ -695,21 +707,24 @@ void LibrarySystem::handle_view_borrowing_history(Member *member)
 
         // Buffer the transaction details to display later
         UserInterface::add_text_to_buffer(selected_transaction->get_transaction_details());
-        
-        // get the resource associated with the transaction
-        Resource* resource = resource_manager.get_resource_with_id(selected_transaction->get_resource_id());
     
-        // Buffer the resource detail as well
-        if (resource)
+        // get the resource associated with the transaction
+        if (!selected_transaction->get_resource_id().empty())
         {
-            UserInterface::add_text_to_buffer(resource->get_resource_details());
-        }
-        else
-        {
-            UserInterface::add_text_to_buffer("\nThere was an error displaying the associated resource.\nIt may have been removed.");
+            Resource* resource = resource_manager.get_resource_with_id(selected_transaction->get_resource_id());
+
+            // Buffer the resource details as well.
+            if (resource)
+            {
+                UserInterface::add_text_to_buffer(resource->get_resource_details());
+            }
+            else
+            {
+                UserInterface::add_text_to_buffer("\nThere was an error displaying the associated resource.\nThe resource may have been removed.");
+            }
         }
 
-        UserInterface::show_buffered_message(); // Show the accumulated message modal
+        UserInterface::show_buffered_message("TRANSACTION DETAILS"); // Show the accumulated message modal
     }
 }
 
@@ -731,7 +746,7 @@ void LibrarySystem::handle_view_balance(Member *member)
     if (balance >= MAX_SECURITY_DEPOSIT)
     {
         UserInterface::add_text_to_buffer("\nYou have reached the maximum balance limit.\n");
-        UserInterface::show_buffered_message();
+        UserInterface::show_buffered_message("ACCOUNT BALANCE");
         return;
     }
 
@@ -783,7 +798,7 @@ void LibrarySystem::handle_view_balance(Member *member)
     UserInterface::add_text_to_buffer("Rs." + std::to_string(deposit_amount) + " has been successfully deposited to your account.\n");
     UserInterface::add_text_to_buffer("Your new balance is: Rs." + std::to_string(member->get_balance()) + "\n");
 
-    UserInterface::show_buffered_message();
+    UserInterface::show_buffered_message("DEPOSIT SUCCESSFUL");
 }
 
 
@@ -803,7 +818,7 @@ void LibrarySystem::handle_view_membership(Member* member)
 
     if (member->get_membership_type() == MemberShipType::Premium)
     {
-        UserInterface::show_buffered_message();
+        UserInterface::show_buffered_message("MEMBERSHIP STATUS");
         return;
     }
 
@@ -818,6 +833,7 @@ void LibrarySystem::handle_view_membership(Member* member)
         if (member->get_balance() < 2000)
         {
             UserInterface::add_text_to_buffer("\nYou don't have enough balance to perform this operation.");
+            UserInterface::show_buffered_message("INSUFFICIENT BALANCE");
         }
         else
         {
@@ -825,8 +841,8 @@ void LibrarySystem::handle_view_membership(Member* member)
             member->withdraw(2000);
             resource_manager.generate_membership_upgrade_notification(member);
             UserInterface::add_text_to_buffer("\nYour account has been successfully upgraded to premium.");
+            UserInterface::show_buffered_message("MEMBERSHIP UPGRADED");
         }
-        UserInterface::show_buffered_message();
     }
 }
 
@@ -877,15 +893,15 @@ void LibrarySystem::handle_donate_resource(Member* member)
     {
         resource_manager.add_resource_to_pending(std::move(resource_to_donate));
         UserInterface::add_text_to_buffer("The resource you donated has been added to the pending list.\n");
-        UserInterface::add_text_to_buffer("It will be added to our collection when an admin accept your donated resource.\n");
+        UserInterface::add_text_to_buffer("It will be added to the catalog when an admin accepts your donated resource.\n");
+        UserInterface::show_buffered_message("DONATION PENDING");
     }
     else
     {
         UserInterface::add_text_to_buffer("There was an error sending donation request to library admin.\n");
         UserInterface::add_text_to_buffer("Please try again later.");
+        UserInterface::show_buffered_message("DONATION FAILED");
     }
-
-    UserInterface::show_buffered_message();
 }
 
 
@@ -905,11 +921,11 @@ void LibrarySystem::handle_add_resource()
     // Check if the user cancelled the form!
     if (!resource_to_add) return; 
 
-    UserInterface::add_text_to_buffer("This resource has been added to our collection successfully.\n");
+    UserInterface::add_text_to_buffer("This resource has been added to our catalog successfully.\n");
     UserInterface::add_text_to_buffer(resource_to_add->get_resource_details());
 
     resource_manager.add_new_resource(std::move(resource_to_add));
-    UserInterface::show_buffered_message();
+    UserInterface::show_buffered_message("RESOURCE ADDED");
 }
 
 
@@ -958,8 +974,8 @@ void LibrarySystem::handle_update_resource()
         bool submit = UserInterface::show_resource_form(choice, title, category, pub_date, fine, extra_vals, error_message);
         
         if (!submit) {
-            UserInterface::add_text_to_buffer("Update operation cancelled.\n");
-            UserInterface::show_buffered_message();
+            UserInterface::add_text_to_buffer("You cancelled the operation.\n");
+            UserInterface::show_buffered_message("UPDATE CANCELLED");
             return;
         }
 
@@ -1028,7 +1044,7 @@ void LibrarySystem::handle_update_resource()
 
     UserInterface::add_text_to_buffer("The resource has been updated successfully.\n");
     UserInterface::add_text_to_buffer(resource_to_update->get_resource_details());
-    UserInterface::show_buffered_message();
+    UserInterface::show_buffered_message("UPDATE SUCCESSFUL");
 }
 
 
@@ -1047,7 +1063,7 @@ void LibrarySystem::handle_remove_resource()
     if (!resource_to_remove->is_available()) 
     {
         UserInterface::add_text_to_buffer("Unable to remove this resource as it is currently borrowed.\n");
-        UserInterface::show_buffered_message();
+        UserInterface::show_buffered_message("OPERATION FAILED");
         return;
     }
 
@@ -1059,8 +1075,8 @@ void LibrarySystem::handle_remove_resource()
 
     resource_manager.remove_resource(resource_to_remove->get_resource_id());
 
-    UserInterface::add_text_to_buffer("The resource has been removed from our collection successfully.\n");
-    UserInterface::show_buffered_message();
+    UserInterface::add_text_to_buffer("The resource has been removed from our catalog successfully.\n");
+    UserInterface::show_buffered_message("RESOURCE REMOVED");
 }
 
 
@@ -1078,7 +1094,7 @@ void LibrarySystem::handle_view_all_members()
     if (members.empty())
     {
         UserInterface::add_text_to_buffer("It looks like there are no members in our library...\n");
-        UserInterface::show_buffered_message();
+        UserInterface::show_buffered_message("SORRY!");
         return;
     }
 
@@ -1171,7 +1187,7 @@ void LibrarySystem::handle_send_notification()
             UserInterface::add_text_to_buffer("Notification broadcasted to " + std::to_string(count) + " member(s) successfully!\n");
         }
 
-        UserInterface::show_buffered_message();
+        UserInterface::show_buffered_message("OPERATION COMPLETE");
         break;
     }
 }
@@ -1194,7 +1210,7 @@ void LibrarySystem::handle_view_donation_request()
         if (size == 0)
         {
             UserInterface::add_text_to_buffer("There are currently no pending donation requests.\n");
-            UserInterface::show_buffered_message();
+            UserInterface::show_buffered_message("SORRY!");
             return;
         }
 
@@ -1219,7 +1235,7 @@ void LibrarySystem::handle_view_donation_request()
         if (!resource_to_donate)
         {
             UserInterface::add_text_to_buffer("There was an error when displaying the resource.\nIt may have been removed.");
-            UserInterface::show_buffered_message();
+            UserInterface::show_buffered_message("SORRY!");
             current_user->remove_notification(target_index);
             continue;
         }
@@ -1244,7 +1260,7 @@ void LibrarySystem::handle_view_donation_request()
     
         // remove the exact notification we just processed
         current_user->remove_notification(target_index);
-        UserInterface::show_buffered_message();
+        UserInterface::show_buffered_message("DONATION STATUS");
     }
 }
 
@@ -1516,7 +1532,7 @@ void LibrarySystem::help_edit_profile(Member* member)
         member->update_profile(full_name, username, password, address);
 
         UserInterface::add_text_to_buffer("Your profile has been updated successfully.\n");
-        UserInterface::show_buffered_message();
+        UserInterface::show_buffered_message("OPERATION COMPLETE");
         break;
     }
 }
@@ -1533,12 +1549,12 @@ void LibrarySystem::help_close_account(Member* member)
 {
     if (member->get_balance() < 0) {
         UserInterface::add_text_to_buffer("Unable to close your account. You have an outstanding balance.\n");
-        UserInterface::show_buffered_message();
+        UserInterface::show_buffered_message("OPERATION FAILED");
         return;
     }
     if (member->get_borrowed_resources_count() > 0) {
         UserInterface::add_text_to_buffer("Unable to close your account. Please return your borrowed resources first.\n");
-        UserInterface::show_buffered_message();
+        UserInterface::show_buffered_message("OPERATIO FAILED");
         return;
     }
 
@@ -1550,7 +1566,7 @@ void LibrarySystem::help_close_account(Member* member)
     account_manager.close_account(member);
 
     UserInterface::add_text_to_buffer("Your account has been closed successfully.\n");
-    UserInterface::show_buffered_message();
+    UserInterface::show_buffered_message("SEE YOU AGAIN");
     
     current_user = nullptr;
 }

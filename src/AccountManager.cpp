@@ -61,7 +61,7 @@ Account* AccountManager::register_member(const std::string& username, const std:
     // Store pointer before moving ownership into database
     Account* member_ptr = new_member.get();
 
-    // Add the new member into the accounts list
+    // Add the new member into the accounts database
     accounts_database.emplace(username, std::move(new_member));
 
     // Return the pointer to the newly created member
@@ -155,7 +155,7 @@ bool AccountManager::send_donation_request(Member* member, Resource* resource)
         member->get_username(),
         admin->get_username(),
         "Donation Request",
-        "A member has sent a request for donating a resource",
+        "A member has sent a request for resource donation.",
         Date::get_current_date(),
         false,
         resource->get_resource_id()

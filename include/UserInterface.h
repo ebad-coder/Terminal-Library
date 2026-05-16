@@ -26,5 +26,5 @@ class UserInterface {
         static void show_report_view(const std::string& title, const std::vector<std::string>& lines);
         static void add_text_to_buffer(const std::string& prompt);
         static bool get_confirmation(const std::string& prompt);
-        static void show_buffered_message();
+        static void show_buffered_message(const std::string& title);
 };

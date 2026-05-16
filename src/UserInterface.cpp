@@ -44,7 +44,7 @@ int UserInterface::show_main_menu()
     auto renderer = Renderer(menu, [&] {
         return vbox({
             separatorEmpty(),
-            text(" LIBRARY RESOURCE MANAGEMENT SYSTEM ") | bold | color(Color::CyanLight) | center,
+            text(" LIBRARY MANAGEMENT SYSTEM ") | bold | color(Color::CyanLight) | center,
             separatorLight() | color(Color::GrayDark),
             separatorEmpty(),
             text("Please select your role to continue:") | dim | color(Color::White) | center,
@@ -117,7 +117,14 @@ int UserInterface::show_member_dashboard(Account* current_user)
         if (unread_count > 0)
         {
             layout.push_back(separatorEmpty());
-            layout.push_back(text("You have " + std::to_string(unread_count) + " new notification(s)") | color(Color::YellowLight) | blink | center);
+            if (unread_count > 1)
+            {
+                layout.push_back(text("You have " + std::to_string(unread_count) + " new notifications") | color(Color::YellowLight) | blink | center);
+            }
+            else
+            {
+                layout.push_back(text("You have " + std::to_string(unread_count) + " new notification") | color(Color::YellowLight) | blink | center);
+            }
         }
 
         layout.push_back(separatorEmpty());
@@ -182,7 +189,14 @@ int UserInterface::show_admin_dashboard(Account* current_user)
         if (unread_count > 0)
         {
             layout.push_back(separatorEmpty());
-            layout.push_back(text("There is " + std::to_string(unread_count) + " new donation request(s)") | color(Color::YellowLight) | blink | center);
+            if (unread_count > 1)
+            {
+                layout.push_back(text("There are " + std::to_string(unread_count) + " new donation requests") | color(Color::YellowLight) | blink | center);
+            }
+            else
+            {
+                layout.push_back(text("There is " + std::to_string(unread_count) + " new donation request") | color(Color::YellowLight) | blink | center);
+            }
         }
 
         layout.push_back(separatorEmpty());
@@ -190,7 +204,7 @@ int UserInterface::show_admin_dashboard(Account* current_user)
         layout.push_back(separatorEmpty());
         layout.push_back(text("Use arrows to navigate | Press ENTER to select") | dim | color(Color::White) | center);
 
-        return vbox(layout) | borderRounded | color(Color::Magenta)| size(WIDTH, GREATER_THAN, 60)| center;
+        return vbox(layout) | borderRounded | color(Color::MagentaLight)| size(WIDTH, GREATER_THAN, 60)| center;
     });
 
     screen.Loop(renderer);
@@ -289,7 +303,7 @@ int UserInterface::show_admin_authentication_menu()
             text("Use arrows to navigate | Press ENTER to select") | dim | color(Color::White) | center
         }) 
         | borderRounded 
-        | color(Color::Magenta)
+        | color(Color::MagentaLight)
         | size(WIDTH, GREATER_THAN, 50)
         | center;
     });
@@ -571,7 +585,7 @@ void UserInterface::add_text_to_buffer(const std::string& prompt)
 
 
 // Acts as the renderer for all accumulated messages. Shows a modal and waits for input.
-void UserInterface::show_buffered_message()
+void UserInterface::show_buffered_message(const std::string& title)
 {
     // If there is no message to show, just return safely
     if (message_buffer.empty()) return; 
@@ -596,7 +610,7 @@ void UserInterface::show_buffered_message()
 
         return vbox({
             separatorEmpty(),
-            text(" SYSTEM MESSAGE ") | bold | color(Color::YellowLight) | center,
+            text(" " + title + " ") | bold | color(Color::YellowLight) | center,
             separatorLight() | color(Color::GrayDark),
             separatorEmpty(),
             
@@ -961,7 +975,7 @@ bool UserInterface::show_resource_form(int type, std::string& title, std::string
         layout.push_back(hbox({text("") | flex, submit_btn->Render(), text("   "), cancel_btn->Render(), text("") | flex}));
         layout.push_back(separatorEmpty());
 
-        return vbox(layout) | borderRounded | color(Color::Magenta) | size(WIDTH, GREATER_THAN, 60) | center;
+        return vbox(layout) | borderRounded | color(Color::MagentaLight) | size(WIDTH, GREATER_THAN, 60) | center;
     });
 
     screen.Loop(renderer);
@@ -1030,7 +1044,7 @@ bool UserInterface::show_notification_form(int choice, std::string& title, std::
         layout.push_back(hbox({text("") | flex, submit_btn->Render(), text("   "), cancel_btn->Render(), text("") | flex}));
         layout.push_back(separatorEmpty());
 
-        return vbox(layout) | borderRounded | color(Color::Magenta) | size(WIDTH, GREATER_THAN, 60) | center;
+        return vbox(layout) | borderRounded | color(Color::MagentaLight) | size(WIDTH, GREATER_THAN, 60) | center;
     });
 
     screen.Loop(renderer);

@@ -26,8 +26,7 @@ Transaction::Transaction(const std::string &u, const std::string &r, const std::
 
 std::string Transaction::get_transaction_details() const
 {
-    std::string details = "\nTransaction Details\n";
-    details += "Borrower    : " + username + '\n';
+    std::string details = "\nBorrower    : " + username + '\n';
     details += "Resource ID : " + resource_id + '\n';
     details += "Issue Date  : " + issue_date + '\n';
     details += "Due Date    : " + due_date + '\n';

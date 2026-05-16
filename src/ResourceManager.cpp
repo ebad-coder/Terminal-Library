@@ -190,7 +190,7 @@ void ResourceManager::generate_borrowing_notification(Member* member, Resource* 
         "System",
         member->get_username(),
         "Borrowing Sucessful",
-        "You have borrowed a resource. Please return the resource within the due date.\nAfter the due date, a fine of Rs. " + std::to_string(resource_to_borrow->get_fine()) + " will be applied each day until the resource is not returned.",
+        "You have borrowed a resource. Please return the resource within the due date.\nAfter the due date, a fine of Rs. " + std::to_string(resource_to_borrow->get_fine()) + " will be applied daily until the resource is not returned.",
         Date::get_current_date(),
         false,
         resource_to_borrow->get_resource_id()
@@ -412,7 +412,7 @@ void ResourceManager::generate_returning_notification(Member* member, Resource* 
     std::unique_ptr<Notification> notification = std::make_unique<Notification>(
         "System",
         member->get_username(),
-        "Returned Sucessful",
+        "Resource Returned",
         "Thankyou for returning the resource. " + late_message + "Keep exploring more.",
         Date::get_current_date(),
         false,
@@ -455,8 +455,7 @@ void ResourceManager::generate_donation_rejected_notification(Member *donor, con
         "Donation Request Rejected",
         "Unfortunately, the resource you donated has not been accepted this time.\nThank you for your interest in supporting our library.",
         Date::get_current_date(),
-        false,
-        resource_id
+        false
     );
 
     donor->handle_notification(std::move(notification));

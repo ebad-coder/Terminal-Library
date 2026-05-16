@@ -1,4 +1,5 @@
 Member|imran123|Imran123|Imran Khan|Islamabad jail|4080|Premium|0|B9538|B9641
-Member|ebad1234|Ebad1234|Ebad Ziad Adam|Karachi, Sindh|887|Standard|2
+Member|ayyanadam|Ayyan123|Ayyan Ziad|Delhi Mumbai, India|4033|Standard|0
+Member|ebad1234|Ebad1234|Ebad Ziad Adam|Karachi, Sindh|87|Premium|2|B2395
 Admin|ooplegend|Admin123|OOP Legend|ned university karachi
 Member|member123|Member123|Good Member|Bahria town china|3540|Premium|0

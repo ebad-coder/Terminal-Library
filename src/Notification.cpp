@@ -15,8 +15,7 @@ Notification::Notification(const std::string& s, const std::string& r, const std
 
 std::string Notification::get_notification_details()
 {
-    std::string details = "\nNotification Details\n";
-    details += "From  : " + sender + "\n";
+    std::string details = "\nFrom  : " + sender + "\n";
     details += "Date  : " + date + "\n";
     details += "Title : " + title + "\n\n";
     details += body + "\n";
