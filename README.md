@@ -121,7 +121,7 @@ Allow member to search any resource against different criterias (title/category/
 ### View Available Resources
 Allow member to view all the available resources in the catalog. They can select any resource to view its details.
 <p align="center">
-  <img src="./screenshots/search_resource_1.png" width="48%">
+  <img src="./screenshots/view_available_resources_1.png" width="48%">
   <img src="./screenshots/view_available_resources_2.png" width="48%">
 </p>
 
